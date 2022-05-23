@@ -1,0 +1,43 @@
+.menuLateral{
+    width: 8.33%;
+    height: 100%;
+    padding: 19px 22px 19px 22px;
+    box-sizing: border-box;
+
+    background: #FAFBFD;
+    border-right: 3px solid #EDEAEA;
+    border-radius: 23px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btnLogo{
+    margin-bottom: 130px
+}
+
+.btnAdd{
+    margin-bottom: 52px;
+}
+
+.btnReceitasDespesas, .btnBancos, .btnRelatorios{
+    margin-bottom: 44px;
+}
+
+.btnBancos{
+
+}
+
+.btnRelatorios{
+
+}
+
+.btnInvestimento{
+    margin-bottom: 254px;
+}
+
+.btnLogOff{
+
+}
