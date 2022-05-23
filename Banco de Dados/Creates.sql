@@ -90,10 +90,10 @@ CREATE TABLE dbo.Conta (
   CodUsuario int Not Null ,
   Nome varchar(45) unique Not Null , 
   NomeBanco varchar(45) Not Null , 
-  Saldo numeric(10,2) Not Null , 
-  Agencia varchar(45), 
-  Numero varchar(45), 
-  PIX char(11), 
+  Saldo numeric(12,2) Not Null , 
+  Agencia char(4), 
+  Numero char(5), 
+  PIX varchar(45), 
   Rendimento numeric(2), 
   Constraint PK_Conta Primary Key Clustered (CodConta, CodUsuario), 
   Constraint FK_Conta_CodUsuario Foreign Key (CodUsuario)
@@ -103,7 +103,7 @@ CREATE TABLE dbo.Conta (
   /*Constraint CK_Conta_Saldo CHECK (Saldo not like '%[^0-9]%'), */
   Constraint CK_Conta_Agencia CHECK (Agencia not like '%[^a-z]%'), 
   Constraint CK_Conta_Numero CHECK (Numero not like '%[^0-9]%'), 
-  Constraint CK_Conta_PIX CHECK (PIX not like '%[^0-9]%'), 
+  /*Constraint CK_Conta_PIX CHECK (PIX not like '%[^0-9]%'), */
   Constraint CK_Conta_Rendimento CHECK (Rendimento not like '%[^0-9]%'), 
 ); 
 
@@ -113,7 +113,7 @@ CREATE TABLE dbo.Receita (
   CodReceita int identity(1,1) Not Null , 
   CodConta int Not Null ,
   CodUsuario int Not Null ,
-  Valor numeric(8,2) Not Null , 
+  Valor numeric(10,2) Not Null , 
   Categoria varchar(45) Not Null , 
   Programacao char(1) Not Null , 
   Periodo varchar(45) Not Null , 
@@ -135,9 +135,9 @@ CREATE TABLE dbo.Despesa (
   CodDespesa int identity(1,1) Not Null , 
   CodConta int Not Null ,
   CodUsuario int Not Null ,
-  Valor numeric(8,2) Not Null , 
+  Valor numeric(10,2) Not Null , 
   Categoria varchar(45) Not Null , 
-  Modo char(1) Not Null , 
+  AVista char(1) Not Null , 
   Programacao char(1) Not Null , 
   Periodo varchar(45) Not Null , 
   Destinatario varchar(45) Not Null, 
@@ -147,7 +147,7 @@ CREATE TABLE dbo.Despesa (
     References dbo.Conta (CodConta, CodUsuario) On Delete Cascade on Update Cascade,
   /*Constraint CK_Despesa_Valor CHECK (Valor not like '%[^0-9]%'), */
   Constraint CK_Despesa_Categoria CHECK (Categoria not like '%[^a-z]%'), 
-  Constraint CK_Despesa_Modo CHECK (Categoria not like '%[^a-z]%'), 
+  /*Constraint CK_Despesa_AVista CHECK (Categoria not like '%[^a-z]%'), */
   Constraint CK_Despesa_Programacao CHECK (Programacao not like '%[^a-z]%'), 
   Constraint CK_Despesa_Periodo CHECK (Periodo not like '%[^a-z]%'), 
   Constraint CK_Despesa_Destinatario CHECK (Destinatario not like '%[^a-z]%'), 
@@ -160,7 +160,7 @@ CREATE TABLE dbo.Produto (
   CodConta int Not Null ,
   CodUsuario int Not Null ,
   Nome varchar(45) Not Null ,
-  Valor numeric(8,2) Not Null , 
+  Valor numeric(10,2) Not Null , 
   Constraint PK_Produto Primary Key Clustered (CodProduto, CodDespesa, CodConta, CodUsuario), 
   Constraint FK_Produto_CodDespesa_CodConta_CodUsuario Foreign Key (CodDespesa, CodConta, CodUsuario)
     References dbo.Despesa (CodDespesa, CodConta, CodUsuario) On Delete Cascade on Update Cascade,
