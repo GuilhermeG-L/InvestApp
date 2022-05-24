@@ -1,19 +1,12 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{    
     height: 100vh;
     display: flex;
-    align-items: center;
 }
 
 /* Imagens */
 
 .logo{
-    width: 80.13%;
+    width:30%;
 }
 
 /* Container esquerda */
@@ -26,7 +19,7 @@ body{
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .secLogin{ 
@@ -34,8 +27,8 @@ body{
     flex-direction: column;
     align-items: center;
 
-    width: 85.13%;
-    margin-top: 9%;
+    width: 100%;
+    margin-top: 20%;
 }
 /* Height: 27.44% */
 
@@ -45,13 +38,13 @@ body{
     font-weight: 500;
     font-size: 35px;
     letter-spacing: 7.4%;
-
+    width: 60%;
     color: var(--cor1);
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .input-login{
-    width: 100%;
+    width: 60%;
     height: 58px;
     background-color: #F2f2f2;
     border: 2px solid #D7D7D7;
@@ -78,15 +71,17 @@ body{
     font-size: 16px;
     letter-spacing: 0.9%;
     text-decoration: none;
-    width: 100%;
+    width: 60%;
     text-align: left;
-    margin-top: 4.62%;
+    margin-top: 2%;
 }
 
 .secButtons{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
 }
 
 .btnLogin{
@@ -103,6 +98,8 @@ body{
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 9.4%;
+
+    cursor: pointer;
 }
 
 .link-registro{
@@ -119,4 +116,39 @@ body{
 .direita{
     height: 100%;
     width: 50%;
+    background-color: var(--cor1);
+
+    padding: 148px 54px 131px 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+
+.img-arvore{
+    width: 736px;
+}
+
+.tit-welcome{
+    width:100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 7.9%;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-welcome{
+    margin-top: 25px;
+    width: 594px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 2.9%;
+    text-align:center;
+    line-height: 45.5px;
+}
+
