@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Imagens */
+
+.logo{
+    width: 80.13%;
+}
+
+/* Container esquerda */
+
+.esquerda{
+    height: 100%;
+    width: 50%;
+    border: 1px solid black;
+    padding: 40px 53px 85px 54px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secLogin{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 85.13%;
+    margin-top: 9%;
+}
+/* Height: 27.44% */
+
+.tit-login{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 7.4%;
+
+    color: var(--cor1);
+    margin-bottom: 10%;
+}
+
+.input-login{
+    width: 100%;
+    height: 58px;
+    background-color: #F2f2f2;
+    border: 2px solid #D7D7D7;
+    border-radius: 5px;
+    padding-left: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.input-login::placeholder{
+    color: #C4C4C4;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.9%;
+}
+
+#email-login{
+    margin-bottom: 2%;
+}
+
+.forget-pw{
+    color: var(--cor4);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    margin-top: 4.62%;
+}
+
+.secButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnLogin{
+    width: 387px;
+    height: 63px;
+
+    margin-top: 20%;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: var(--cor2);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 9.4%;
+}
+
+.link-registro{
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+    color: var(--cor4);
+    font-family: 'Inter', sans-serif;
+    margin-top: 2%;
+}
+
+/* Container direita */
+
+.direita{
+    width: 50%;
+    background-color: ;
+}

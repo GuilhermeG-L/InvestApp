@@ -1,3 +1,13 @@
+:root{
+    --cor1: #1D4C4F;
+    --cor2: #28B67E;
+    --cor3: #0D1321;
+    --cor4: #5D9A9E;
+    --cor5: #84DEBB;
+    --cor6: #5D6986;
+}
+
+
 /* font-family: 'Lato', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
