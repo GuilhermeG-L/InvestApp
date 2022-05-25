@@ -116,7 +116,7 @@ CREATE TABLE dbo.Receita (
   Valor numeric(10,2) Not Null , 
   Categoria varchar(45) Not Null , 
   Programacao char(1) Not Null , 
-  Periodo varchar(45) Not Null , 
+  DataReceita date Not Null , 
   Recebedor varchar(45) Not Null, 
   Constraint PK_Receita Primary Key Clustered (CodReceita, CodConta, CodUsuario), 
   Constraint FK_Receita_CodConta_CodUsuario Foreign Key (CodConta, CodUsuario)
@@ -125,7 +125,6 @@ CREATE TABLE dbo.Receita (
   /*Constraint CK_Receita_Valor CHECK (Valor not like '%[^0-9]%'), */
   Constraint CK_Receita_Categoria CHECK (Categoria not like '%[^a-z]%'), 
   Constraint CK_Receita_Programacao CHECK (Programacao not like '%[^a-z]%'), 
-  Constraint CK_Receita_Periodo CHECK (Periodo not like '%[^a-z]%'), 
   Constraint CK_Receita_Recebedor CHECK (Recebedor not like '%[^a-z]%'), 
 ); 
 
@@ -139,7 +138,7 @@ CREATE TABLE dbo.Despesa (
   Categoria varchar(45) Not Null , 
   AVista char(1) Not Null , 
   Programacao char(1) Not Null , 
-  Periodo varchar(45) Not Null , 
+  DataDespesa date Not Null , 
   Destinatario varchar(45) Not Null, 
   Emitente varchar(45) Not Null, 
   Constraint PK_Despesa Primary Key Clustered (CodDespesa, CodConta, CodUsuario), 
@@ -149,7 +148,6 @@ CREATE TABLE dbo.Despesa (
   Constraint CK_Despesa_Categoria CHECK (Categoria not like '%[^a-z]%'), 
   /*Constraint CK_Despesa_AVista CHECK (Categoria not like '%[^a-z]%'), */
   Constraint CK_Despesa_Programacao CHECK (Programacao not like '%[^a-z]%'), 
-  Constraint CK_Despesa_Periodo CHECK (Periodo not like '%[^a-z]%'), 
   Constraint CK_Despesa_Destinatario CHECK (Destinatario not like '%[^a-z]%'), 
   Constraint CK_Despesa_Emitente CHECK (Emitente not like '%[^a-z]%'), 
 ); 
