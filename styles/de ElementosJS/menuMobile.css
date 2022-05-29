@@ -1,0 +1,20 @@
+@media (max-width: 428px) {
+    .menuMobile{
+        width: 100%;
+        min-height: 77px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        background-color: #FCFCFC;
+
+        border:1px solid black;
+    }
+}
+
+@media (min-width: 1280px) {
+    .menuMobile{
+        display: none;
+    }
+}

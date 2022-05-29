@@ -1,0 +1,256 @@
+@media (max-width:428px) {
+    .esquerda{
+        padding: 38px 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%
+    }
+
+    .direita{
+        display: none;
+    }
+
+    .img-logo{
+        width: 51.63%;
+    }
+
+    .sec-login{
+        width: 84.81%;
+        margin-top: 16.63%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tit-login{
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-size: 35px;
+        color: var(--cor1);
+        text-transform: uppercase;
+    }
+
+    .input-login::placeholder{
+        color: #C4C4C4;
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.9%;
+    }
+
+    .input-login{
+        width: 100%;
+        height: 51px;
+
+        background-color: #F2f2f2;
+        border: 2px solid #D7D7D7;
+        border-radius: 5px;
+        padding-left: 17px;
+        display: flex;
+        align-items: center;
+    }
+
+    #input-email{
+        margin-top: 42px;
+    }
+
+    #input-pw{
+        margin-top: 17px;
+    }
+
+    .forget-pw{
+        width: 81.84%;
+        margin-top: 25px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        color: var(--cor4);
+        text-decoration: none;
+        text-align: left;
+    }
+
+    .btn-login{
+        width: 84.81%;
+        height: 57px;
+        margin-top: 4.64%;
+
+        background-color: var(--cor2);
+        color: white;
+        text-transform: uppercase;
+        
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 25px;
+
+        border: none;
+        border-radius: 10px;
+    }
+
+    .link-registro{
+        margin-top: 100%;
+
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--cor4);
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    body{    
+        height: 100vh;
+        display: flex;
+    }
+    
+    /* Imagens */
+    
+    .img-logo{
+        width:40%;
+    }
+    
+    /* Container esquerda */
+    
+    .esquerda{
+        height: 100%;
+        width: 50%;
+        padding: 3.9% 6.36% 8.3% 6.36%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .sec-login{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 85.13%;
+        margin-top: 25.19%
+    }
+    /* Height: 27.44% */
+    
+    .tit-login{
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 35px;
+        letter-spacing: 7.4%;
+        width: 100%;
+        color: var(--cor1);
+        margin-bottom: 5%;
+    }
+    
+    .input-login{
+        width: 100%;
+        min-height: 5.86%;
+        background-color: #F2f2f2;
+        border: 2px solid #D7D7D7;
+        border-radius: 5px;
+        padding-left: 17px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .input-login::placeholder{
+        color: #C4C4C4;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.9%;
+    }
+    
+    #input-email{
+        margin-bottom: 2%;
+    }
+    
+    .forget-pw{
+        color: var(--cor4);
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.9%;
+        text-decoration: none;
+        width: 60%;
+        text-align: left;
+        margin-top: 2%;
+    }
+    
+    .secButtons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        width: 100%;
+    }
+    
+    .btn-login{
+        width:85.13%;
+        min-height: 12%;
+    
+        margin-top: 20%;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: var(--cor2);
+        text-transform: uppercase;
+        font-family: 'Inter', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 9.4%;
+    
+        cursor: pointer;
+    }
+    
+    .link-registro{
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 0.9%;
+        color: var(--cor4);
+        font-family: 'Inter', sans-serif;
+        margin-top: 2%;
+    }
+    
+    /* Container direita */
+    
+    .direita{
+        height: 100%;
+        width: 50%;
+        background-color: var(--cor1);
+    
+        padding: 3.9% 0% 12.79% 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tit-welcome{
+        width: 85.13%;
+        font-family: 'Inter', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 7.9%;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    .text-welcome{
+        margin-top: 25px;
+        width: 82.5%;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 2.9%;
+        text-align:center;
+        line-height: 150%;
+    }
+
+    .img-login{
+        margin-top: 5%;
+        width: 90.05%;       
+    }
+    
+    
+}
