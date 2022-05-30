@@ -1,3 +1,7 @@
+body{
+    background-color: #F6F8FA;
+}
+
 @media (max-width: 428px) {
     .menuMobile{
         width: 100%;
@@ -8,9 +12,112 @@
         justify-content: space-between;
         
         background-color: #FCFCFC;
-
-        border:1px solid black;
+        position: fixed;
+        bottom: 0;
     }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        
+        padding-top: 31px;
+    }
+
+    .cards-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 89.48%;
+        height: 122px;
+        padding: 9.83% 5.22% 19.67% 5.26%;
+        margin-bottom: 20px;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-valor-tit{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 29px;
+        line-height: 0px;
+        margin-bottom: 10%;
+    }
+
+    .valor-card{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        text-align: end;
+        /* border:1px solid red; */
+    }
+
+    #saldo{
+        background-color: #FCFCFC;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    #receitas{
+        background: linear-gradient(95.46deg, #2AFEB7 8.32%, rgba(8, 199, 146, 0.43) 100%);
+    }
+
+    #despesas{
+        background: linear-gradient(93.91deg, rgba(253, 142, 118, 0.88) 9.59%, rgba(245, 149, 140, 0.81) 89.2%);
+    }
+
+    .btns-adicionar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 89.48%;
+        margin-top: 51px;
+    }
+
+    .btn-add-menu{
+        width: 100%;
+        height: 102px;
+        padding: 24px;
+        background: #FCFCFC;
+        border: 2px solid rgba(193, 193, 193, 0.42);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 19px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 0px;
+        /* or 0% */
+
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+    }
+
+    .btn-add-menu img{
+        width: 54px;
+        margin-right: 5%;
+    }
+
 }
 
 @media (min-width: 1280px) {
