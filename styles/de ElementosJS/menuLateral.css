@@ -1,5 +1,5 @@
 .menuLateral{
-    width: 8.33%;
+    width: 6%;
     height: 100%;
     padding: 19px 22px 19px 22px;
     box-sizing: border-box;
@@ -15,15 +15,15 @@
 }
 
 .btnLogo{
-    margin-bottom: 130px
+    width: 100%;
 }
 
 .btnAdd{
-    margin-bottom: 52px;
+    max-width: 64px;
+    margin-top: 12.40%;
 }
 
 .btnReceitasDespesas, .btnBancos, .btnRelatorios{
-    margin-bottom: 44px;
 }
 
 .btnBancos{
@@ -40,4 +40,8 @@
 
 .btnLogOff{
 
+}
+
+img{
+    display: none;
 }

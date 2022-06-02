@@ -29,33 +29,33 @@ btnLogOff.classList = 'btnLogOff'
 
 // Atribuição de links
 
-btnLogo.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnLogo.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
-btnAdd.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnAdd.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
-btnReceitasDespesas.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnReceitasDespesas.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
-btnBancos.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnBancos.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
-btnRelatorios.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnRelatorios.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
-btnInvestimento.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnInvestimento.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
-btnLogOff.addEventListener('click', ()=> {
-    window.location = // Nome da página
-})
+// btnLogOff.addEventListener('click', ()=> {
+//     window.location = // Nome da página
+// })
 
 // Appends
 menuLateral.append(btnLogo)

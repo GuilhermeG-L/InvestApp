@@ -1,7 +1,51 @@
-@media (max-width: 428px){
-
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #F6F8FA;
 }
 
-@media (min-width: 1280){
-    
+.conteudo{
+    flex:1;
+    background-color: transparent;
+
+    display: flex;
+    padding: 67px 48px 94px 53px;
+    border: 1px solid blue;
+}
+
+.conteudo-esquerda, .conteudo-direita{
+    height: 100%;   
+}
+
+.conteudo-esquerda{
+    border: 1px solid black;
+    width: 43.39%;
+        
+}
+
+.conteudo-direita{
+    border: 1px solid red;
+}
+
+/* Cards */
+
+.card{
+    height: 18.42%;
+}
+
+#card-saldo{
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#card-receita{
+    background: linear-gradient(95.46deg, #2AFEB7 8.32%, rgba(8, 199, 146, 0.43) 100%);
+    border-radius: 20px;
+}
+
+#card-despesa{
+    background: linear-gradient(93.91deg, rgba(253, 142, 118, 0.88) 9.59%, rgba(245, 149, 140, 0.81) 89.2%);
+    border-radius: 20px;
 }
