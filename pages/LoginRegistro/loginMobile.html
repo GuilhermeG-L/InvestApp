@@ -18,14 +18,40 @@
         </section>
         <a href = "#" class="forget-pw">Forget your password?</a>
         <button class = "btn-login">Log in</button>
-        <a href = "./registroMobile.html" class = "link-registro">Doesn’t have an account? Register right now</a>
+        <a href = "#" class = "link-registro">Doesn’t have an account? Register right now</a>
     </div>
-    <div class="direita">
-        <p class = "tit-welcome">Bem vindo ao investApp</p>
-        <p class = "text-welcome">Com o InvestApp você pode controlar suas<br/>finanças pessoais de forma fácil, rápida e prática<br/>no seu dia a dia</p>
 
-        <img src = "../../midia/photos/img Login.png" class = "img-login"/>
+    <div class="direita">
+        <div class="primeiroConteudo">
+            <p class = "tit-welcome">Bem vindo ao investApp</p>
+            <p class = "text-welcome">Com o InvestApp você pode controlar suas<br/>finanças pessoais de forma fácil, rápida e prática<br/>no seu dia a dia</p>
+        
+            <img src = "../../midia/photos/img Login.png" class = "img-login"/>
+        </div>
+        <div class="segundoConteudo">
+            <p class = "tit-esquerda">Change your<br/>financial life</p>
+            <p class="texto-esquerda">With InvestApp you can control your expenses, earnings and have less stress to manage your money. We have features that will offer you a broad view so you can plan your every step</p>
+            <img src="../../midia/photos/img Dinheiro.png" class="imgDinheiro"/>
+        </div>
     </div>
-    <script>console.log(window.innerWidth); console.log(window.innerHeight)</script>
+
+    <div class="areaRegistro">
+        <section class = "seclogo">
+            <img src = "../../midia/icons/Logo.png" class = "logo"/>
+        </section>
+        <section class="register">
+            <p class = "tit-form">Sign up</p>
+            <section class = "sec-nameLastname">
+                <input type="text" class="input-registro" id = "input-name" placeholder="Name">
+                <input type="text" class="input-registro" id = "input-lastname" placeholder="Lastname">
+            </section>
+            <input type = "email" class = "input-registro" id = "input-email" placeholder="E-Mail">
+            <input type = "password" class = "input-registro" id = "input-pw" placeholder="Password">
+            <input type = "password" class = "input-registro" id = "input-confpw" placeholder="Confirm password">
+            <button class = "btnRegistro">Register</button>
+        </section>
+        <p class = "texto-login">Already have an account? <a href = "./loginMobile.html" class = "link-login">Log In</a></p>
+    </div>
+    <script src = "../../functions/de Interface/animacoesLoginRegistro.js"></script>
 </body>
 </html>

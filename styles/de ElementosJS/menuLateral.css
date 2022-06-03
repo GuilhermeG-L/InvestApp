@@ -1,7 +1,7 @@
 .menuLateral{
     width: 6%;
     height: 100%;
-    padding: 19px 22px 19px 22px;
+    padding: 19px 2% 19px 2%;
     box-sizing: border-box;
 
     background: #FAFBFD;
@@ -15,33 +15,32 @@
 }
 
 .btnLogo{
-    width: 100%;
+    width: 125%;
 }
 
 .btnAdd{
-    max-width: 64px;
-    margin-top: 12.40%;
+    width: 200%;
+    margin-top: 3em;
 }
 
-.btnReceitasDespesas, .btnBancos, .btnRelatorios{
+.btnReceitasDespesas{
+    margin-top: 2em;
 }
 
-.btnBancos{
-
+.btnBancos, .btnRelatorios, .btnInvestimento{
+    margin-top: 1.3em;
 }
 
-.btnRelatorios{
-
-}
-
-.btnInvestimento{
-    margin-bottom: 254px;
+.btnReceitasDespesas, .btnBancos, .btnRelatorios, .btnInvestimento{
+    width: 150%;
 }
 
 .btnLogOff{
-
+    margin-top: auto;
+    width: 150%;
+    justify-self: flex-end;
 }
 
 img{
-    display: none;
+    cursor: pointer;
 }
