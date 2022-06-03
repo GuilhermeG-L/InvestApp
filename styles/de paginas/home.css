@@ -138,3 +138,59 @@ body{
 .btn-add p{
     flex: 1;
 }
+
+/* Listas */
+
+.listas-receitasDespesas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lista-home{
+    width: 296px;
+    height: 245px;
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 12px 41px 22px 23px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.lista-home-tit{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    width: 100%;
+
+    
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.ul-lista{
+    margin-top: 33px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.li-lista{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
