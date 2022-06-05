@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/fontes.css">
+    <link rel="stylesheet" href="../../styles/de ElementosJS/menuLateral.css">
+    <link rel="stylesheet" href="../../styles/de paginas/receitas.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <script> window.api.loadscript('./functions/de Interface/menuLateral.js');</script>
+    <div class="conteudo">
+        <div class="conteudo-cima">
+            <div class="titulo">
+                <p class="titulo-receitas">Receitas</p>
+            </div>
+            <div class="titulo">
+                <select class="receitas-despesas" id="receitas-despesas">
+                    <option value="receitas">Receitas</option>
+                    <option value="despesas">Despesas</option>
+                </select>
+            </div>
+        </div>
+        <div class="conteudo-meio">
+            <div class="btns-receitas">
+                <button class = "btns-total">
+                    <p class="btn-titulo">Receitas totais</p>
+                    <img class ="btn-images" src = "../../midia/icons/btn MaisVazio.png"/>
+                </button>
+                
+                <button class = "btns-mensal">
+                    <p class="btn-titulo">Receitas mensais</p>
+                    <img class ="btn-images" src = "../../midia/icons/btn MenosVazio.png"/>
+                </button>
+
+                <button class = "btns-add">
+                    <img class ="btn-images-2" src = "../../midia/icons/btn MenosVazio.png"/>
+                    <p>Receitas</p>
+                </button>
+            </div>
+        </div>
+        <div class="conteudo-baixo">
+            <div class="relatorio-receitas">
+                <div class="relatorio-receitas">
+                    <!-- Chart -->
+                </div>
+            </div>
+            <div class="listas-receitas">
+                <div class = "lista-itens">
+                    <p class = "lista-titulo">Valor</p>
+                    <p class="lista-titulo">Categoria</p>
+                    <p class="lista-titulo">Data</p>
+                    <p class="lista-titulo">Ação</p>
+                </div>
+                <div class = "lista-itens">              
+                    <ul class = "ul-lista">
+                        <li class = "li-lista">
+                            <p class = "valor-item" id = "Rtd1">item</p>
+                            <p class="categoria-item" id="Rtd2">item2</p>
+                            <p class="data-item" id="Rtd3">item3</p>
+                            <div>
+                                <p>botao1</p>
+                                <p>botao2</p>
+                            </div>
+                        </li>
+                        <li class = "li-lista">
+                            <p class = "valor-item" id = "Rtd4"></p>
+                            <p class="categoria-item" id="Rtd5"></p>
+                            <p class="data-item" id="Rtd6"></p>
+                        </li>
+                        <li class = "li-lista">
+                            <p class = "valor-item" id = "Rtd7"></p>
+                            <p class="categoria-item" id="Rtd8"></p>
+                            <p class="data-item" id="Rtd9"></p>
+                        </li>
+                        <li class = "li-lista">
+                            <p class = "valor-item" id = "Rtd10"></p>
+                            <p class="categoria-item" id="Rtd11"></p>
+                            <p class="data-item" id="Rtd12"></p>
+                        </li>
+                        <li class = "li-lista">
+                            <p class = "valor-item" id = "Rtd13"></p>
+                            <p class="categoria-item" id="Rtd14"></p>
+                            <p class="data-item" id="Rtd15"></p>
+                        </li>
+                        <li class = "li-lista">
+                            <p class = "valor-item" id = "Rtd16"></p>
+                            <p class="categoria-item" id="Rtd17"></p>
+                            <p class="data-item" id="Rtd18"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script> window.api.loadscript('./listaHome.js');</script>
+</body>
+</html>
