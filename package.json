@@ -1,0 +1,20 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.5.7",
+    "electron-packager": "^15.4.0"
+  },
+  "dependencies": {
+    "chart.js": "^3.8.0",
+    "electron-version": "^2.0.1",
+    "tedious": "^14.0.0"
+  }
+}

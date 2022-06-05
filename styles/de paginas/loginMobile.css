@@ -98,6 +98,10 @@ body{
     margin-bottom: 2%;
 }
 
+#input-emailreg{
+    margin-bottom: 2%;
+}
+
 .forget-pw{
     color: var(--cor4);
     font-family: 'Inter', sans-serif;
@@ -329,7 +333,7 @@ body{
     width: 48.35%;
 }
 
-#input-email, #input-pw, #input-confpw{
+#input-email, #input-emailreg, #input-pw, #input-pwreg, #input-confpw{
     margin-top: 1.85%;
 }
 

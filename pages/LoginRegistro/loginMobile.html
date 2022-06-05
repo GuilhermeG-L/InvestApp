@@ -16,9 +16,9 @@
             <input type = "email" class = "input-login" id = "input-email" placeholder="Enter with your email"/>
             <input type = "password" class = "input-login" id = "input-pw" placeholder="Enter with your password"/>
         </section>
-        <a href = "#" class="forget-pw">Forget your password?</a>
-        <button class = "btn-login">Log in</button>
-        <a href = "#" class = "link-registro">Doesn’t have an account? Register right now</a>
+        <a href = "#" class="forget-pw">Esqueceu sua senha?</a>
+        <button class = "btn-login" id = "btn-login">Entre</button>
+        <a href = "#" class = "link-registro">Não tem uma conta? Registre-se agora</a>
     </div>
 
     <div class="direita">
@@ -29,8 +29,8 @@
             <img src = "../../midia/photos/img Login.png" class = "img-login"/>
         </div>
         <div class="segundoConteudo">
-            <p class = "tit-esquerda">Change your<br/>financial life</p>
-            <p class="texto-esquerda">With InvestApp you can control your expenses, earnings and have less stress to manage your money. We have features that will offer you a broad view so you can plan your every step</p>
+            <p class = "tit-esquerda">Mude sua<br/>vida financeira</p>
+            <p class="texto-esquerda">Com o InvestApp você pode controlar suas despesas, receitas e se estressar menos gerenciando seu dinheiro. Temos soluções que vão te oferecer uma visão geral para que você possa planejar cada passo.</p>
             <img src="../../midia/photos/img Dinheiro.png" class="imgDinheiro"/>
         </div>
     </div>
@@ -40,18 +40,20 @@
             <img src = "../../midia/icons/Logo.png" class = "logo"/>
         </section>
         <section class="register">
-            <p class = "tit-form">Sign up</p>
+            <p class = "tit-form">Entre</p>
             <section class = "sec-nameLastname">
                 <input type="text" class="input-registro" id = "input-name" placeholder="Name">
                 <input type="text" class="input-registro" id = "input-lastname" placeholder="Lastname">
             </section>
-            <input type = "email" class = "input-registro" id = "input-email" placeholder="E-Mail">
-            <input type = "password" class = "input-registro" id = "input-pw" placeholder="Password">
+            <input type = "email" class = "input-registro" id = "input-emailreg" placeholder="E-Mail">
+            <input type = "password" class = "input-registro" id = "input-pwreg" placeholder="Password">
             <input type = "password" class = "input-registro" id = "input-confpw" placeholder="Confirm password">
-            <button class = "btnRegistro">Register</button>
+            <button class = "btnRegistro" id = "btnRegistro">Registre-se</button>
         </section>
-        <p class = "texto-login">Already have an account? <a href = "./loginMobile.html" class = "link-login">Log In</a></p>
+        <p class = "texto-login">Já tem uma conta? <a href = "./loginMobile.html" class = "link-login">Entre</a></p>
     </div>
-    <script src = "../../functions/de Interface/animacoesLoginRegistro.js"></script>
+    <script> window.api.loadscript('./functions/de Interface/animacoesLoginRegistro.js');</script>
+    <script>window.api.loadscript('./loginUsuario.js');</script>
+    <script>window.api.loadscript('./salvaUsuario.js');</script>
 </body>
 </html>

@@ -10,23 +10,23 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <script src="../../functions/de Interface/menuLateral.js"></script>
+    <script> window.api.loadscript('./functions/de Interface/menuLateral.js');</script>
     <div class="conteudo">
         <div class="conteudo-esquerda">
             <div class="cards-valor">
                 <div class="card" id = "card-saldo">
                     <p class="card-tit">Saldo</p>
-                    <p class="card-v">R$7281,96</p>
+                    <p class="card-v" id="v1"></p>
                 </div>
 
                 <div class="card" id="card-receita">
                     <p class="card-tit">Receita</p>
-                    <p class="card-v">R$10.893,76</p>
+                    <p class="card-v" id="v2"></p>
                 </div>
 
                 <div class="card" id="card-despesa">
                     <p class="card-tit">Despesa</p>
-                    <p class="card-v">R$3.701,80</p>
+                    <p class="card-v" id="v3"></p>
                 </div>
             </div>
             <div class="btns-adicionar-home">
@@ -52,20 +52,20 @@
                     <p class = "lista-home-tit">Últimas despesas</p>
                     <ul class = "ul-lista">
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-despesa1">Despesa 1</p>
-                            <p class="valor-item" id="valor-despesa1">R$1250,99</p>
+                            <p class = "nome-item" id = "Dtd1"></p>
+                            <p class="valor-item" id="Dtd2"></p>
                         </li>
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-despesa2">Despesa 2</p>
-                            <p class="valor-item" id="valor-despesa2">R$1250,99</p>
+                            <p class = "nome-item" id = "Dtd3"></p>
+                            <p class="valor-item" id="Dtd4"></p>
                         </li>
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-despesa3">Despesa 3</p>
-                            <p class="valor-item" id="valor-despesa3">R$1250,99</p>
+                            <p class = "nome-item" id = "Dtd5"></p>
+                            <p class="valor-item" id="Dtd6"></p>
                         </li>
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-despesa4">Despesa 4</p>
-                            <p class="valor-item" id="valor-despesa4">R$1250,99</p>
+                            <p class = "nome-item" id = "Dtd7"></p>
+                            <p class="valor-item" id="Dtd8"></p>
                         </li>
                     </ul>
                 </div>
@@ -73,25 +73,26 @@
                     <p class = "lista-home-tit">Últimas receitas</p>
                     <ul class = "ul-lista">
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-receita1">Receita 1</p>
-                            <p class="valor-item" id="valor-receita1">R$1250,99</p>
+                            <p class = "nome-item" id = "Rtd1"></p>
+                            <p class="valor-item" id="Rtd2"></p>
                         </li>
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-receita2">Receita 2</p>
-                            <p class="valor-item" id="valor-receita2">R$1250,99</p>
+                            <p class = "nome-item" id = "Rtd3"></p>
+                            <p class="valor-item" id="Rtd4"></p>
                         </li>
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-receita3">Receita 3</p>
-                            <p class="valor-item" id="valor-receita3">R$1250,99</p>
+                            <p class = "nome-item" id = "Rtd5"></p>
+                            <p class="valor-item" id="Rtd6"></p>
                         </li>
                         <li class = "li-lista">
-                            <p class = "nome-item" id = "nome-receita4">Receita 4</p>
-                            <p class="valor-item" id="valor-receita4">R$1250,99</p>
+                            <p class = "nome-item" id = "Rtd7"></p>
+                            <p class="valor-item" id="Rtd8"></p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <script> window.api.loadscript('./listaHome.js');</script>
 </body>
 </html>
