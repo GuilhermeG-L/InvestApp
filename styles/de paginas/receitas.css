@@ -14,18 +14,18 @@ body{
    
 }
 
-.conteudo-cima, .conteudo-meio, .conteudo-baixo{
-    height: 100%;   
-}
-
 .conteudo-cima{
-    display: inline-flex;
-    width: 43.39%;
-        
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 33%;
+    margin-bottom: -100px;      
 }
 
-.conteudo-baixo{
-   
+hr {
+	border: 0;
+	border-top: 1px solid #8282826e;
+    margin-bottom: 50px;
 }
 
 /* Cards */
@@ -42,17 +42,15 @@ body{
 }
 
 .receitas-despesas{
-    width: 60%;
-    height: 40%;
+    width: 30%;
+    height: 50%;
     text-align: center;
     letter-spacing: 0.06em;
 
-    padding: 2%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    margin-left: 450px;
 
-    
 }
 
 #receitas-despesas{
@@ -72,6 +70,8 @@ body{
 }
 
 .titulo-receitas{
+    width: 100%;
+    height: 30%;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -221,6 +221,17 @@ body{
     height: 100%;
 }
 
+.lista-itens-titulo{
+    display: flex;
+    flex-direction: row;
+    background: rgb(8, 199, 145);
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+}
+
 .lista-titulo{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -252,4 +263,16 @@ body{
     justify-content: space-between;
     width: 100%;
     height: 100%;
+}
+
+.valor-item{
+    margin-right: 10px;
+    margin-left: 140px;
+}
+
+.acao-item{
+    margin-left: -25px;
+    margin-right: 115px;
+    display: flex;
+    flex-direction: row;
 }
