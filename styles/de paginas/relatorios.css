@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #F6F8FA;
+}
+
+.conteudo{
+    flex:1;
+    background-color: transparent;
+    display: flex;
+    padding:  3.62%;
+    flex-direction: column;
+}
+
+.conteudo-cima{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15%;
+}
+
+.conteudo-meio{
+    flex:1;
+    background-color: transparent;
+    display: flex;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.div-meio{
+    height: 170%;
+    flex:1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-esquerda, .conteudo-direita{
+    height: 100%;   
+    width: 100%;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: Gray;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    padding-left: 30px;	
+}
+
+/* Cards */
+
+.cards-graficos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-grafico{
+    width: 475px;
+    height: 370px;
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 12px 41px 22px 23px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
