@@ -1,0 +1,302 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #F6F8FA;
+}
+
+.conteudo{
+    flex:1;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    padding:  3.62%;
+   
+}
+
+.conteudo-cima{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 33%;
+    margin-bottom: -100px;      
+}
+
+.conteudo-meio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 33%;
+}
+
+.conteudo-baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 33%;
+}
+
+/* Cards */
+
+.titulo{
+   
+    width: 100%;
+    height: 66%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-contas{
+    width: 100%;
+    height: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: #5f5f5fe0;
+    /* or 0% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.card, .btns-contas{
+    width: 30%;
+    height: 50%;
+
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+#card-saldo, .btns-contas{
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.card-titulo, .btn-titulo, .conta-saldo-titulo {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    /* or 0% */
+
+    display: flex;
+    align-items: top;
+    text-align: left;
+    letter-spacing: 0.06em;
+    padding-bottom: 2%;
+}
+
+.card-valor{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    /* or 0% */
+    width: 100%;
+    text-align: right;
+
+    color: #000000;
+
+}
+
+.btn-titulo{
+    color: gray;
+}
+
+.btn-images{
+    /* or 0% */
+    width: 25%;
+    align-items: left;
+    padding: 2%;
+}
+
+.btns-add{
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    border: none;   
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    cursor: pointer;
+}
+
+/* Listas */
+
+.conta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 45%;
+    height: 100%;
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 12px 41px 22px 23px;
+    margin: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.conta-cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    width: 100%;
+    height: 40%;
+    background: rgb(8, 199, 145);
+}
+
+.conta-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+
+    width: 50%;
+    height: 100%;
+}
+
+.conta-botao button.editar, button.excluir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+}
+
+.conta-botao  button.editar, button.excluir{
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    border-radius: 2px;
+    border:none;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+.conta-botao button.main{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border:none;
+    background: url(../../midia/icons/3pontos.png);
+}
+
+.conta-botao ul{
+    position:absolute;
+    bottom: 27%;
+    right: 51%;
+    padding:0;
+    padding-right:5px;
+    margin:0;
+    list-style:none;
+    z-index:10; 
+    
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+.conta-botao ul li{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    opacity: 0;
+    
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    transition: .3s ease-out;
+  }
+
+
+  .conta-botao button.main:active,
+  .conta-botao button.main:focus{
+    outline: none;
+   }
+  
+  .conta-botao button.main:active + ul li,
+  .conta-botao button.main:focus + ul li{
+    opacity: 1;
+  }
+
+.conta-nome {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    /* or 0% */
+
+    display: flex;
+    align-items: top;
+    text-align: left;
+    letter-spacing: 0.06em;
+    padding-bottom: 2%;
+}
+
+.conta-rendimento{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    /* or 0% */
+    width: 100%;
+    display: flex;
+    text-align: left;
+    color:gray;
+
+}
+
+.conta-saldo{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 2%;
+    width: 100%;
+    height: 60%;
+}
+
+.card-valor, .conta-valor{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    /* or 0% */
+    width: 100%;
+    text-align: right;
+
+    color: gray;
+
+}
