@@ -1,0 +1,75 @@
+body{
+    	display: flex;
+    	height: 100vh;
+    	background-color: #F6F8FA;
+}
+
+.principal{
+	flex:1;
+    	background-color: transparent;
+    	display: flex;
+	flex-direction: column;
+    	padding:  4%; 
+}
+
+.dados, .grafico{
+  	border: 2px ridge LightGray;
+	width: 80%;
+}
+
+.dados{
+	height:30%
+}
+
+.grafico{
+	height:70%
+}
+
+.OpcoesEsquerda, .OpcoesDireita {
+  	width: 40%;
+	float: left;
+  	padding: 10px;
+}
+
+.OpcoesBotao {
+  	width: 20%;
+	float: right;
+	padding-bottom: 50px;
+
+}
+
+.dados:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+h1, h3{
+    	font-family: 'Montserrat', sans-serif;
+	color: Gray;
+    	font-style: normal;
+    	font-weight: 400;
+    	font-size: 40px;
+	padding-left: 30px;	
+}
+
+input, select{
+	font-family: 'Montserrat', sans-serif;
+	color: Gray;
+    	font-style: normal;
+    	font-size: 20px;
+	padding-left: 30px;
+	border: 3px outset LightGray;
+}
+
+.btnSimular{	
+	background: Gray;
+    	box-sizing: border-box;
+    	border: 2px solid rgba(193, 193, 193, 0.42);
+    	border-radius: 100px;
+	height: 30%
+    	font-family: 'Montserrat', sans-serif;
+    	font-style: normal;
+    	font-size: 30px;
+	align-items: center;
+    	color: #FFFFFF;
