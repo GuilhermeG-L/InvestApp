@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/fontes.css">
+    <link rel="stylesheet" href="../../styles/de ElementosJS/menuLateral.css">
+    <link rel="stylesheet" href="../../styles/de paginas/conta.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <script> window.api.loadscript('./functions/de Interface/menuLateral.js');</script>
+    <div class="conteudo">
+        <div class="conteudo-cima">
+            <div class="titulo">
+                <p class="titulo-contas">Contas bancárias</p>
+            </div>
+        </div>
+        <div class="conteudo-meio">
+            <div class="card" id = "card-saldo">
+                <p class="card-titulo">Saldo Total</p>
+                <p class="card-valor" id="v1"></p>
+            </div>
+            <div class="btns-contas">  
+                <button class = "btns-add">
+                    <img class ="btn-images" src = "../../midia/icons/btn MaisCinza.png"/>
+                    <p class="btn-titulo">Adicionar nova conta</p>
+                </button>
+            </div>
+        </div>
+        <div class="conteudo-baixo">
+            <div class="conta">
+                <div class = "conta-cabecalho">
+                    <div class = "conta-titulo">
+                        <p class = "conta-nome" id="Rtd1">Nubank</p>
+                        <p class = "conta-rendimento" id="Rtd2">11,65 % a.a</p>
+                    </div>
+                    <div class="conta-botao">
+                        <button class="main" >
+                        </button>
+                        <ul class="conta-selecionar">
+                            <li>
+                                <button class="editar">Editar</button>
+                            </li>
+
+                            <li>
+                                <button class="excluir">Excluir</button>
+                            </li>                        
+                        </ul>
+                    </div>
+                </div>
+                <div class = "conta-saldo">              
+                    <p class = "conta-saldo-titulo">Saldo da Conta</p>
+                    <p class="conta-valor" id="Rtd3">R$5407.89</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script> window.api.loadscript('./listaHome.js');</script>
+</body>
+</html>
