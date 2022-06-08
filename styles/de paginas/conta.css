@@ -95,7 +95,7 @@ body{
     font-size: 22px;
     /* or 0% */
 
-    display: flex;
+    display: block;
     align-items: top;
     text-align: left;
     letter-spacing: 0.06em;
@@ -139,8 +139,6 @@ body{
     cursor: pointer;
 }
 
-/* Listas */
-
 .conta{
     display: flex;
     align-items: center;
@@ -150,10 +148,8 @@ body{
     height: 100%;
 
     background: #FCFCFC;
-    border: 2px solid rgba(193, 193, 193, 0.42);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    padding: 12px 41px 22px 23px;
     margin: 2%;
 
     display: flex;
@@ -171,6 +167,8 @@ body{
     width: 100%;
     height: 40%;
     background: rgb(8, 199, 145);
+    border-radius: 20px;
+    
 }
 
 .conta-titulo{

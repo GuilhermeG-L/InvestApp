@@ -1,0 +1,335 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #F6F8FA;
+}
+
+.conteudo{
+    flex:1;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    padding:  3.62%;
+   
+}
+
+.conteudo-cima{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 1%;
+}
+
+.conteudo-meio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo-baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    height: 15%;
+    padding-top: 2%
+}
+
+.titulo{
+   
+    width: 100%;
+    height: 66%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-formulario{
+    width: 100%;
+    height: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: #5f5f5fe0;
+    /* or 0% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+
+    width: 100%;
+    height: 100%;
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 12px 41px 22px 23px;
+    margin: 2%;    
+}
+
+hr{
+    border-left: 1px solid gray;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right: transparent;
+
+
+    height: 60%;
+    position:absolute;
+    left: 50%;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    padding-top: 2%
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    padding-top: 2%
+}
+
+.titulo-registro{
+    width: 100%;
+    height: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #5f5f5fe0;
+    /* or 0% */
+    margin-bottom: 2%;
+    display: flex;
+    letter-spacing: 0.06em;
+}
+
+.input-registro{
+    width: 100%;
+    height: 30px;
+    border: 2px solid #D7D7D7;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.input-registro::placeholder{
+    color: #C4C4C4;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+}
+
+.input-registro:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+
+.registrar-conta, .dados-conta{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 80%;
+    height: 50%;
+    padding-top: 2%
+}
+
+.chave-pix, .complementos{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    padding-top: 2%
+}
+
+.banco{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    height: 30%;
+    padding-top: 2%;
+}
+
+#input-agencia-numero{
+    margin-left:5%;
+}
+
+.tipo-chave-pix {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../../midia/icons/setaPraBaixo.png) no-repeat center left #FFF;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding-right: 20px;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+}
+
+.tipo-chave-pix{
+    color: #C4C4C4;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+    padding-left: 50px;
+}
+
+.chave{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+    padding-top: 2%;
+}
+
+.porcentagem, #input-rendimento {
+    position: relative;
+    width: 150px;
+}
+    
+.porcentagem::after {
+    content: '' attr(unit);
+    position: absolute;
+    top: 3px;
+    left: 45px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    padding-left: 45px;
+}    
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: baseline   ;
+    width: 100%;
+    height: 100%;
+}
+
+.btns-formulario{
+    width: 20%;
+    height: 100%;
+
+    background: rgb(213, 213, 38);
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 22px 23px 22px 23px;
+    margin: 2%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-registrar {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    /* or 0% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: white;
+
+}
+
+.btns-registrar{
+    width: 200%;
+    height: 200%;
+
+    background-color: transparent;
+    border: none;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btns-formulario-2{
+    width: 20%;
+    height: 100%;
+
+    background: rgb(213, 213, 213);
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 22px 23px 22px 23px;
+    margin: 2%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-cancelar {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    /* or 0% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: rgb(79, 79, 79);
+
+}
+
+.btns-cancelar{
+    width: 200%;
+    height: 200%;
+
+    background-color: transparent;
+    border: none;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
