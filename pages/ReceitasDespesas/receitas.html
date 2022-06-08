@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fontes.css">
-    <link rel="stylesheet" href="menuLateral.css">
-    <link rel="stylesheet" href="receitas.css">
+    <link rel="stylesheet" href="../../styles/fontes.css">
+    <link rel="stylesheet" href="../../styles/de ElementosJS/menuLateral.css">
+    <link rel="stylesheet" href="../../styles/de paginas/receitas.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Dashboard</title>
 </head>
 <body>
     <!-- <script> window.api.loadscript('./functions/de Interface/menuLateral.js');</script> -->
-    <script src = "menuLateral.js"></script>
+    <script src = "../../functions/de Interface/menuLateral.js"></script>
 	
 	<div class="conteudo">
 		
@@ -29,21 +29,27 @@
 		
 		<div class="cards-valor">
 			<div class="card" id = "card-despt">
-				<p class="card-tit">Receitas totais</p>
-				<img class="imgs" src = "receitat.png"/>
+				<div class="sub-card">
+					<p class="card-tit">Receitas totais</p>
+					<p class="card-val" id="cval1">Receitas totais</p>
+				</div>
+				<img class="imgs" src = "../../midia/icons/icon ReceitasTotais.png"/>
 				  
 			</div>
 
 			<div class="card" id="card-despm">
-				<p class="card-tit">Receitas mensais</p>
-				<img class="imgs" src = "receitam.png"/>
+				<div class="sub-card">
+					<p class="card-tit">Receitas mensais</p>
+					<p class="card-val" id="cval2">Receitas mensais</p>
+				</div>
+				<img class="imgs" src = "../../midia/icons/icon ReceitasMensais.png"/>
 						
 			</div>
 
 	 
 			<button class ="card" id = "btnreceita">
-				<img class="imgs2" src = "add.png"/>
-				<p class="casrd-tit2">Receita</p>
+				<img class="imgs2" src = "../../midia/icons/btn MaisBranco.png"/>
+				<p class="card-tit2">Receita</p>
 				
 			</button>
 		</div>
@@ -59,62 +65,7 @@
 						<th class="table-tit">Ações</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td>2</td>
-						<td>Conta 2</td>
-						<td>Supermercado</td>
-						<td>R$28,00</td>
-						<td>17/07/2022</td>
-						<td>
-							<a href = "#" title = "editar"><button id = "btnEdit"><img src = "lapiz.png"/></button></a>
-								<a href = "#" title = "excluir"><button id = "btnexclui" ><img src = "lixeira.png"/></button></a>
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Conta 2</td>
-						<td>Supermercado</td>
-						<td>R$28,00</td>
-						<td>17/07/2022</td>
-						<td>
-							<a href = "#" title = "editar"><button id = "btnEdit"><img src = "lapiz.png"/></button></a>
-								<a href = "#" title = "excluir"><button id = "btnexclui" ><img src = "lixeira.png"/></button></a>
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Conta 2</td>
-						<td>Supermercado</td>
-						<td>R$28,00</td>
-						<td>17/07/2022</td>
-						<td>
-							<a href = "#" title = "editar"><button id = "btnEdit"><img src = "lapiz.png"/></button></a>
-								<a href = "#" title = "excluir"><button id = "btnexclui" ><img src = "lixeira.png"/></button></a>
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Conta 2</td>
-						<td>Supermercado</td>
-						<td>R$28,00</td>
-						<td>17/07/2022</td>
-						<td>
-							<a href = "#" title = "editar"><button id = "btnEdit"><img src = "lapiz.png"/></button></a>
-								<a href = "#" title = "excluir"><button id = "btnexclui" ><img src = "lixeira.png"/></button></a>
-						</td>		
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Conta 2</td>
-						<td>Supermercado</td>
-						<td>R$28,00</td>
-						<td>17/07/2022</td>
-						<td>
-							<a href = "#" title = "editar"><button id = "btnEdit"><img src = "lapiz.png"/></button></a>
-								<a href = "#" title = "excluir"><button id = "btnexclui" ><img src = "lixeira.png"/></button></a>
-						</td>
-					</tr>
+				<tbody id="tbReceita">
 				</tbody>
 		</table>
 		
@@ -125,7 +76,6 @@
 		
 		
 	</div>
-    
-    <!-- <script> window.api.loadscript('./listaHome.js');</script> -->
+    <script> window.api.loadscript('./listaReceita.js');</script>
 </body>
 </html>
