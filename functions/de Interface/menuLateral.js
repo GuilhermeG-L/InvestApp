@@ -54,7 +54,7 @@ btnAdd.addEventListener('click', ()=>{
 })
 
 btnTransacoes.addEventListener('click', ()=>{
-    window.location = "../ReceitasDespesas/despesas.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+    window.location = "../ReceitasDespesas/receitas.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
 })
 
 btnBancos.addEventListener('click', ()=>{
