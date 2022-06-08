@@ -67,9 +67,10 @@ input, select{
     	box-sizing: border-box;
     	border: 2px solid rgba(193, 193, 193, 0.42);
     	border-radius: 100px;
-	height: 30%
+	height: 30%;
     	font-family: 'Montserrat', sans-serif;
     	font-style: normal;
     	font-size: 30px;
 	align-items: center;
     	color: #FFFFFF;
+}

@@ -1,3 +1,9 @@
+// Função para pegar código de usuário
+
+const urlParams = new URLSearchParams(window.location.search);
+const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
+const user = urlParams.get('user');
+
 // Criação dos itens
 
 var menuLat = document.createElement('div')
@@ -41,3 +47,28 @@ menuLat.append(btnLogOff)
 
 // Append do Menu Lateral no Body
 document.body.append(menuLat)
+
+// Atribuição dos redirecionamentos
+btnAdd.addEventListener('click', ()=>{
+    window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+})
+
+btnTransacoes.addEventListener('click', ()=>{
+    window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+})
+
+btnBancos.addEventListener('click', ()=>{
+    window.location = "../Conta/Conta.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+})
+
+btnRelatorios.addEventListener('click', ()=>{
+    window.location = "../Relatorios/relatorios.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+})
+
+btnInvestimento.addEventListener('click', ()=>{
+    window.location = "../Investimentos/investimentos.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+})
+
+btnLogOff.addEventListener('click', ()=>{
+    window.location = "../Home/home.html";
+})
