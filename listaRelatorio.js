@@ -70,6 +70,7 @@ console.log(teste);
         }]
       };
       var options = {
+        maintainAspectRatio: false,
         cutout: '60%',
         hoverOffset: 10,
         title: {
@@ -78,7 +79,6 @@ console.log(teste);
         }
       };
       var opt = {
-      
       type: "doughnut",
       data: data,
       options: options
@@ -172,6 +172,7 @@ console.log(teste);
       }]
     };
     var options = {
+      maintainAspectRatio: false,
       cutout: '60%',
       hoverOffset: 10,
       title: {
@@ -275,6 +276,7 @@ console.log(teste);
       }]
     };
     var options = {
+      maintainAspectRatio: false,
       cutout: '60%',
       hoverOffset: 10,
       title: {
@@ -378,6 +380,7 @@ console.log(teste);
       }]
     };
     var options = {
+      maintainAspectRatio: false,
       cutout: '60%',
       hoverOffset: 10,
       title: {
