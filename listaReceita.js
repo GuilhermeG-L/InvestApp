@@ -172,10 +172,10 @@ function conexao1() {
     console.log("Lendo dados da tabela...");
 
     const request = new Request(
-      `SELECT r.CodReceita, c.Nome, r.Categoria, r.Valor, r.DataReceita
+      `SELECT r.CodReceita, c.NomeConta, r.Categoria, r.Valor, r.DataReceita
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Receita r ON c.CodConta = r.CodConta
+      Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
       Where u.CodUsuario = \'${user}\'
       Order By r.DataReceita DESC`,
       (err, rowCount) => {

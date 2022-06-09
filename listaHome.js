@@ -112,7 +112,7 @@ console.log(teste);
       console.log("Lendo dados da tabela...");
   
       const request = new Request(
-        `SELECT c.Nome, c.Saldo
+        `SELECT c.NomeConta, c.Saldo
         FROM dbo.Conta c
         Where c.CodUsuario = \'${user}\'`, 
         (err, rowCount) => {
@@ -355,10 +355,10 @@ function conexao2() {
     console.log("Lendo dados da tabela...");
 
     const request = new Request(
-      `SELECT TOP 4 c.Nome, d.Valor
+      `SELECT TOP 4 c.NomeConta, d.Valor
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Despesa d ON c.CodConta = d.CodConta
+      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
       Where u.CodUsuario = \'${user}\'`, 
       (err, rowCount) => {
         if (err) {
@@ -431,10 +431,10 @@ function conexao4() {
     console.log("Lendo dados da tabela...");
 
     const request = new Request(
-      `SELECT TOP 4 c.Nome, r.Valor
+      `SELECT TOP 4 c.NomeConta, r.Valor
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Receita r ON c.CodConta = r.CodConta
+      Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
       Where u.CodUsuario = \'${user}\'`, 
       (err, rowCount) => {
         if (err) {

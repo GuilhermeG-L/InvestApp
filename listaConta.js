@@ -111,7 +111,7 @@ function conexao() {
     console.log("Lendo dados da tabela...");
 
     const request = new Request(
-      `SELECT c.Nome, c.Rendimento 'Rendimento', c.Saldo
+      `SELECT c.NomeConta, c.Rendimento 'Rendimento', c.Saldo
       FROM dbo.Conta c
       Where c.CodUsuario = \'${user}\'`, 
       (err, rowCount) => {

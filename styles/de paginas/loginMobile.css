@@ -339,7 +339,7 @@ body{
 
 .btnRegistro{
     margin-top: 7.03%;
-
+    cursor: pointer;
     width: 100%;
     height: 57px;
 
