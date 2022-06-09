@@ -7,39 +7,39 @@
     <link rel="stylesheet" href="../../styles/fontes.css">
     <link rel="stylesheet" href="../../styles/de ElementosJS/menuLateral.css">
     <link rel="stylesheet" href="../../styles/de paginas/invest.css">
-    <title>Investimentos</title>
+    <title>Investimentos - Ambiente de teste</title>
 </head>
 <body>
 	<script src = "../../functions/de Interface/menuLateral.js"></script>
-	<div class="principal">
-	<h1>Simulação de Investimentos</h1>
+	<div class="conteudo">
+		<p class="tit-pagina">Simulação de investimento</p>
 		<div class="dados">
-			<h3>Dados para a simulação</h3>
-			<div class="OpcoesEsquerda">
-				<select id="opcoes">
-    				<option value="cdb">CDB</option>
-    				<option value="lci">LCI</option>
-    				<option value="lca">LCA</option>
-    				<option value="cri">CRI</option>
-				<option value="cra">CRA</option>
-  				</select>
-				<br><br>
-		 		<input type="text" id="depinic" placeholder="Depósito inicial"><br><br>
-			</div>
-			<div class="OpcoesDireita">
-		 		<input type="text" id="depmen" placeholder="Depósito mensal"><br><br>
-				<input type="date" id="resgate" placeholder="Mês/Ano de resgate"><br><br>
-			</div>
-			<div class="OpcoesBotao">
-		 		<button class = "btnSimular">
-                    		<p>Simular</p>
-                		</button>
-				<br><br>
+			<p class="tit-container-dados">Dados para a simulação</p>
+			<div class="insercao-dados">
+				<section class="coluna-esquerda">
+					<select name="tipoInvest" id = "tipoInvest">
+						<option id = "option-default" value="default">Tipo de investimento</option>
+						<option value="cdb">CDB</option>
+						<option value="lci">LCI</option>
+						<option value="lca">LCA</option>
+						<option value="cri">CRI</option>
+						<option value="cra">CRA</option>
+					</select>
+					<input type="number" class="input-dados" id = "deposito-inicial" placeholder="Depósito inicial" />
+				</section>
+				<section class="coluna-direita">
+					<input type="number" class="input-dados" id="deposito-mensal" placeholder="Depósito mensal"/>
+					<input type="text" class="input-dados" id="mes-resgate" placeholder="Mês e ano de resgate"/>
+				</section>
+				<button class = "btn-simula">Simular</button>
 			</div>
 		</div>
-		<div class="grafico">
-			<h3>Resultado</h3>
+		<div class="resultado">
+			<p class="tit-container-dados">Resultado</p>
+			<div class="area-grafico">
+				<!-- Inserção do gráfico -->
+			</div>
 		</div>
-	</div>	
+	</div>
 </body>
 </html>

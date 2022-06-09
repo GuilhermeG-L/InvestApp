@@ -1,76 +1,157 @@
 body{
-    	display: flex;
-    	height: 100vh;
-    	background-color: #F6F8FA;
+    display: flex;
+    height: 100vh;
+    background-color: #F6F8FA;
 }
 
-.principal{
-	flex:1;
-    	background-color: transparent;
-    	display: flex;
-	flex-direction: column;
-    	padding:  4%; 
+.conteudo{
+    flex:1;
+    background-color: transparent;
+    padding:  3%;
+
+    /* border: 1px solid red; */
 }
 
-.dados, .grafico{
-  	border: 2px ridge LightGray;
-	width: 80%;
+.tit-pagina{
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 26px;
+	/* or 42% */
+	
+	display: flex;
+	align-items: center;
+	
+	color: #848A9D;	
 }
 
 .dados{
-	height:30%
-}
-
-.grafico{
-	height:70%
-}
-
-.OpcoesEsquerda, .OpcoesDireita {
-  	width: 40%;
-	float: left;
-  	padding: 10px;
-}
-
-.OpcoesBotao {
-  	width: 20%;
-	float: right;
-	padding-bottom: 50px;
-
-}
-
-.dados:after {
-  	content: "";
-  	display: table;
-  	clear: both;
-}
-
-h1, h3{
-    	font-family: 'Montserrat', sans-serif;
-	color: Gray;
-    	font-style: normal;
-    	font-weight: 400;
-    	font-size: 40px;
-	padding-left: 30px;	
-}
-
-input, select{
-	font-family: 'Montserrat', sans-serif;
-	color: Gray;
-    	font-style: normal;
-    	font-size: 20px;
-	padding-left: 30px;
-	border: 3px outset LightGray;
-}
-
-.btnSimular{	
-	background: Gray;
-    	box-sizing: border-box;
-    	border: 2px solid rgba(193, 193, 193, 0.42);
-    	border-radius: 100px;
+	width: 100%;
 	height: 30%;
-    	font-family: 'Montserrat', sans-serif;
-    	font-style: normal;
-    	font-size: 30px;
+
+	background: #FCFCFC;
+	border: 2px solid rgba(193, 193, 193, 0.42);
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin-top: 3%;
+	padding: 1%;
+}
+
+.tit-container-dados{
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 25px;
+
+	display: flex;
 	align-items: center;
-    	color: #FFFFFF;
+	text-align: center;
+
+	color: #848A9D;
+}
+
+.insercao-dados{
+	margin-top: 1%;
+	/* border: 1px solid red; */
+	display: flex;
+	width: 100%;
+	height: 80%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.coluna-esquerda, .coluna-direita{
+	/* border: 1px solid yellow; */
+	width: 45%;
+	height: 75%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+select {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	padding: 0 1em 0 0.5em;
+	margin: 0;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select {
+	outline: none;	
+}
+
+#tipoInvest{
+	width: 75%;
+	height: 25%;
+	border-bottom: 2px solid #DBDBDB;
+	cursor: pointer;
+	background-color: #fff;
+	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+
+	color: #C8C8C8;
+}
+
+
+.input-dados{
+	height: 20%;
+	width: 75%;
+	border: none;
+	border-bottom: 2px solid #DBDBDB;
+	padding: 0 1em 0 0.5em;
+}
+
+.input-dados::placeholder{
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+	color: #C8C8C8;
+}
+
+.btn-simula{
+	width: 20%;
+	height: 50%;
+	margin-right: 5%;
+
+	background: var(--cor5);
+	border-radius: 20px;
+	border: none;
+
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-align: center;
+
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.resultado{
+	width: 100%;
+	height: 50%;
+	margin-top: 1%;
+	padding: 1%;	
+
+	background: #FCFCFC;
+	border: 2px solid rgba(193, 193, 193, 0.42);
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+
+
 }
