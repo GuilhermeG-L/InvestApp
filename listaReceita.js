@@ -1,22 +1,5 @@
 const { Connection, Request } = require("tedious");
 
-/*function pegarUsuario(parameter) {  
-  var loc = location.search.substring(1, location.search.length);   
-  var param_value = false;   
-  var params = loc.split("&");   
-  for (i=0; i<params.length;i++) {   
-      param_name = params[i].substring(0,params[i].indexOf('='));   
-      if (param_name == parameter) {                                          
-          param_value = params[i].substring(params[i].indexOf('=')+1)   
-      }   
-  }   
-  if (param_value) {   
-      return param_value;   
-  }   
-  else {   
-      return undefined;   
-  }   
-}*/
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
@@ -30,12 +13,12 @@ console.log(teste);
   const config = {
     authentication: {
       options: {
-        userName: "InvestApp",
-        password: "InvestApp"
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
       },
       type: "default"
     },
-    server: "localhost",
+    server: "35.199.92.55",
     options: {
       database: "InvestApp",
       encrypt: true
@@ -95,12 +78,12 @@ function conexao() {
   const config = {
     authentication: {
       options: {
-        userName: "InvestApp",
-        password: "InvestApp"
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
       },
       type: "default"
     },
-    server: "localhost",
+    server: "35.199.92.55",
     options: {
       database: "InvestApp",
       encrypt: true
@@ -159,12 +142,12 @@ function conexao1() {
   const config = {
     authentication: {
       options: {
-        userName: "InvestApp",
-        password: "InvestApp"
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
       },
       type: "default"
     },
-    server: "localhost",
+    server: "35.199.92.55",
     options: {
       database: "InvestApp",
       encrypt: true

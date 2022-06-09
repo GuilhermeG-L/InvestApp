@@ -26,6 +26,15 @@ btnRelatorios.classList = 'btnRelatorios'
 btnInvestimento.classList = 'btnInvestimento'
 btnLogOff.classList = 'btnLogOff'
 
+// Atribuição de titles
+
+btnAdd.title = 'Home'
+btnTransacoes.title = 'Receitas e Despesas'
+btnBancos.title = 'Contas'
+btnRelatorios.title = 'Relatórios'
+btnInvestimento.title = 'Simulação de Investimento'
+btnLogOff.title = 'LogOff'
+
 // Atribuição de SRC para as imagens
 btnLogo.src = '../../midia/icons/Logo reduzido.png'
 btnAdd.src = '../../midia/icons/btn Mais.png'

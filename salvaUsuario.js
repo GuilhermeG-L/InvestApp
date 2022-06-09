@@ -1,7 +1,6 @@
 const { Connection, Request } = require("tedious");
 
 
-
   var btnRegistro = document.querySelector('.btnRegistro');
   btnRegistro.addEventListener('click', ()=>{
     let nome = (document.querySelector('#input-name').value);
@@ -16,12 +15,12 @@ const { Connection, Request } = require("tedious");
     const config = {
       authentication: {
         options: {
-          userName: "InvestApp",
-          password: "InvestApp"
+          userName: "sqlserver",
+          password: "IES301%Inve$tApp"
         },
         type: "default"
       },
-      server: "localhost",
+      server: "35.199.92.55",
       options: {
         database: "InvestApp",
         encrypt: true

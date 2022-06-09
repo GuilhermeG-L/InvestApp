@@ -1,5 +1,6 @@
 const { Connection, Request } = require("tedious");
 
+
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
 const user = urlParams.get('user');
@@ -10,12 +11,12 @@ console.log(teste);
   const config = {
     authentication: {
       options: {
-        userName: "InvestApp",
-        password: "InvestApp"
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
       },
       type: "default"
     },
-    server: "localhost",
+    server: "35.199.92.55",
     options: {
       database: "InvestApp",
       encrypt: true
@@ -80,12 +81,12 @@ function conexao() {
   const config = {
     authentication: {
       options: {
-        userName: "InvestApp",
-        password: "InvestApp"
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
       },
       type: "default"
     },
-    server: "localhost",
+    server: "35.199.92.55",
     options: {
       database: "InvestApp",
       encrypt: true

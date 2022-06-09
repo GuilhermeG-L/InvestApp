@@ -1,5 +1,6 @@
 const { Connection, Request } = require("tedious");
 
+
 var btnLogar = document.querySelector('#btn-login');
 btnLogar.addEventListener('click', ()=>{
   let email = (document.querySelector('#input-email').value);
@@ -9,12 +10,12 @@ btnLogar.addEventListener('click', ()=>{
   const config = {
     authentication: {
       options: {
-        userName: "InvestApp",
-        password: "InvestApp"
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
       },
       type: "default"
     },
-    server: "localhost",
+    server: "35.199.92.55",
     options: {
       database: "InvestApp",
       encrypt: true
