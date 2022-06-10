@@ -66,7 +66,7 @@ function paginaAtiva(){
             btnBancos.src = "../../midia/icons/btn ContasBancarias ativo.png"
             break
         case 'Relatórios':
-            btnRelatorios.src = "../../midia/icons/btn Relatorios ativo"
+            btnRelatorios.src = "../../midia/icons/btn Relatorios ativo.png"
             break
         case 'Investimentos':
             btnInvestimento.src = "../../midia/icons/btn Investimento ativo.png"
