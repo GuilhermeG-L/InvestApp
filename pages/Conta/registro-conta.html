@@ -23,17 +23,17 @@
                 <div class="direita">
                     <div class="registrar-conta">
                         <p class="titulo-registro" id="titulo-registrar-conta">Registro de Conta</p>
-                        <input type = "text" class = "input-registro" id = "input-nome-conta" placeholder="Nome da Conta">
-                        <input type = "text" class = "input-registro" id = "input-nome-banco" placeholder="Nome do Banco">
-                        <input type = "number" class = "input-registro" id = "input-valor" placeholder="Saldo">
+                        <input type = "text" class = "input-registro" id = "input1" placeholder="Nome da Conta">
+                <!--        <input type = "text" class = "input-registro" id = "input2" placeholder="Nome do Banco"> -->
+                        <input type = "number" class = "input-registro" id = "input2" placeholder="Saldo">
                     </div>
                     <div class="dados-conta">
                         <p class="titulo-registro" id="titulo-dados-conta">Dados de Conta</p>
                         <div class="banco">
-                            <input type = "number" class = "input-registro" id = "input-agencia" placeholder="Agência">
-                            <input type = "number" class = "input-registro" id = "input-agencia-numero" placeholder="Número">
+                            <input type = "number" class = "input-registro" id = "input3" placeholder="Agência">
+                            <input type = "number" class = "input-registro" id = "input4" placeholder="Número">
                         </div>
-                        <input type = "text" class = "input-registro" id = "input-banco" placeholder="Banco">
+                        <input type = "text" class = "input-registro" id = "input5" placeholder="Banco">
                     </div>
                 </div>
                 <hr>
@@ -48,14 +48,14 @@
                             <option class="option-chave" id="tipo-chave-outros">Outros</option>
                         </select>
                         <div class="chave">
-                            <input type = "text" class = "input-registro" id = "input-chave" placeholder="Chave" >
+                            <input type = "text" class = "input-registro" id = "input6" placeholder="Chave" >
                         </div>
                     </div>
                     <div class="complementos">
                         <p class="titulo-registro" id="titulo-complementos">Complemento</p>
 <!--                        <label class="porcentagem" unit="% a.a."> -->
                             <label class="porcentagem">
-                            <input type = "number" class = "input-registro" id = "input-rendimento" placeholder="Rendimento">
+                            <input type = "number" class = "input-registro" id = "input7" placeholder="Rendimento">
                         </label>
                     </div>
                 </div>
@@ -77,6 +77,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script> window.api.loadscript('./listaHome.js');</script> -->
+    <script> window.api.loadscript('./regConta.js');</script>
 </body>
 </html>
