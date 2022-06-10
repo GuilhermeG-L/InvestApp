@@ -44,3 +44,8 @@
 img{
     cursor: pointer;
 }
+
+.btnLateralAtivo{
+    width: 100%;
+    background-color: #EDEAEA;
+}

@@ -163,6 +163,13 @@ hr{
 	width: 20%;
 	cursor: pointer;
 	
+    display: flex;
+    align-items: center;
+}
+
+#btnreceita .card-tit2{
+    height: 100%;
+    margin-left: 6%;
 }
 
 

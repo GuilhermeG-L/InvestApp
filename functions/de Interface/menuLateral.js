@@ -1,8 +1,14 @@
+// Função para pegar o titulo da página
+function tituloPagina(){
+    return document.title
+}
+
 // Função para pegar código de usuário
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
 const user = urlParams.get('user');
+
 
 // Criação dos itens
 
@@ -15,15 +21,17 @@ var btnRelatorios = document.createElement('img')
 var btnInvestimento = document.createElement('img')
 var btnLogOff = document.createElement('img')
 
+
+
 // Atribuição de classes
 
-menuLat.classList = 'menuLateral'
-btnLogo.classList = 'btnLogo'
-btnAdd.classList = 'btnAdd'
-btnTransacoes.classList = 'btnReceitasDespesas'
-btnBancos.classList = 'btnBancos'
-btnRelatorios.classList = 'btnRelatorios'
-btnInvestimento.classList = 'btnInvestimento'
+menuLat.classList = 'menuLateral btnMenuLateral'
+btnLogo.classList = 'btnLogo btnMenuLateral'
+btnAdd.classList = 'btnAdd btnMenuLateral'
+btnTransacoes.classList = 'btnReceitasDespesas btnMenuLateral'
+btnBancos.classList = 'btnBancos btnMenuLateral'
+btnRelatorios.classList = 'btnRelatorios btnMenuLateral'
+btnInvestimento.classList = 'btnInvestimento btnMenuLateral'
 btnLogOff.classList = 'btnLogOff'
 
 // Atribuição de titles
@@ -44,6 +52,33 @@ btnRelatorios.src = '../../midia/icons/btn Relatorios.png'
 btnInvestimento.src = '../../midia/icons/btn Investimento.png'
 btnLogOff.src = '../../midia/icons/btn LogOff.png'
 
+function paginaAtiva(){
+    var pagAtiva = tituloPagina()
+    switch(pagAtiva){
+        case 'Dashboard':
+            console.log('Dashboard')
+            break
+        case 'Despesas':
+        case 'Receitas':
+            btnTransacoes.src = "../../midia/icons/btn ReceitasDespesas ativo.png"
+            break
+        case 'Contas':
+            btnBancos.src = "../../midia/icons/btn ContasBancarias ativo.png"
+            break
+        case 'Relatórios':
+            btnRelatorios.src = "../../midia/icons/btn Relatorios ativo"
+            break
+        case 'Investimentos':
+            btnInvestimento.src = "../../midia/icons/btn Investimento ativo.png"
+            break
+        default:
+            console.log('Erro!')
+            break
+    }
+}
+
+paginaAtiva()
+
 // Append dos elementos no Menu Lateral
 
 menuLat.append(btnLogo)
@@ -58,6 +93,10 @@ menuLat.append(btnLogOff)
 document.body.append(menuLat)
 
 // Atribuição dos redirecionamentos
+btnLogo.addEventListener('click', ()=>{
+    window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+})
+
 btnAdd.addEventListener('click', ()=>{
     window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
 })
@@ -81,3 +120,4 @@ btnInvestimento.addEventListener('click', ()=>{
 btnLogOff.addEventListener('click', ()=>{
     window.location = "../LoginRegistro/loginMobile.html";
 })
+

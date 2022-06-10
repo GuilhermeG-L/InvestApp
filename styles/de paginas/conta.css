@@ -212,10 +212,13 @@ body{
     padding: 2%;
     width: 100%;
     height: 35%;
-    background: rgb(8, 199, 145);
-    border-radius: 20px;
+    background-color: #C6F9D1;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     
 }
+
+
 
 .conta-titulo{
     display: flex;
