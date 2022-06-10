@@ -335,16 +335,16 @@ body{
 }*/
 
 .conta-botao ul li{
-    display: none;
-    justify-content: flex-start;
-    position: relative;
+    visibility: hidden;
+/*    justify-content: flex-start;
+    position: relative; */
     opacity: 0;
     
     -webkit-animation: fadeIn 1s;
     animation: fadeIn .3s;
-/*    -webkit-transition: .3s ease-out;
+    -webkit-transition: .3s ease-out;
     -moz-transition: .3s ease-out;
-    transition: .3s ease-out; */
+    transition: .3s ease-out;
   }
 
 @-webkit-keyframes fadeIn {
@@ -364,7 +364,7 @@ body{
   .conta-botao button.main:active + ul li,
   .conta-botao button.main:focus + ul li{
     opacity: 1;
-    display: block;
+    visibility: visible;
   }
 
 .conta-nome {
