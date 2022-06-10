@@ -165,11 +165,13 @@ hr{
 	
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #btnreceita .card-tit2{
     height: 100%;
     margin-left: 6%;
+    vertical-align: middle;
 }
 
 
