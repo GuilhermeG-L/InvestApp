@@ -60,7 +60,16 @@ ipcMain.on('errodelete', function (event) {
     dialog.showErrorBox ('Não foi possível deletar os dados! ','Verifique se os dados existem e estão corretos.')
 })
 
+const options = {
+    type: 'warning',
+    title: 'AVISO!',
+    buttons: ['OK'],
+    message: 'As Simulações de Investimento do InvestApp, apesar de baseadas em dados reais, são totalmente ilustrativas e de cunho educativo/comparativo, podendo não representar fielmente o retorno de um investimento em determinado banco sob condições específicas.'
+  };
 
+ipcMain.on('msginvestimento', function (event) {
+    dialog.showMessageBox (null, options)
+})
 
 
 
