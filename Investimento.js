@@ -96,8 +96,7 @@ btnSimular.addEventListener('click', ()=>{
     };
     var chart = new Chart(c,opt);
 
-    Chart.overrides.doughnut.plugins.legend.display = true
-    Chart.overrides.doughnut.plugins.legend.position = 'bottom'
+    Chart.defaults.plugins.legend.display = false
 
     // Console.log da query.
     request.on("row", columns => {
