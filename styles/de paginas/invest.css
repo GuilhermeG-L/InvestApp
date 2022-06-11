@@ -96,8 +96,7 @@ select {
 	height: 25%;
 	border-bottom: 2px solid #DBDBDB;
 	cursor: pointer;
-	background-color: #fff;
-	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+	background-color: #FCFCFC;
 
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
@@ -113,6 +112,7 @@ select {
 	border: none;
 	border-bottom: 2px solid #DBDBDB;
 	padding: 0 1em 0 0.5em;
+	background-color: #FCFCFC;
 }
 
 .input-dados::placeholder{

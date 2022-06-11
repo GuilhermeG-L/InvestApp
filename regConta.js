@@ -36,7 +36,7 @@ if (conta != null) {
       }
     };
 
-    // Query Azure SQL: Busca Produto.
+    // Query MS SQL
     const connection = new Connection(config);
 
     // Tentativa de conexão.
@@ -81,6 +81,8 @@ if (conta != null) {
       connection.execSql(request);
     }})
 
+    listagem();
+
 }
 
 else {
@@ -112,7 +114,7 @@ else {
       }
     };
 
-    // Query Azure SQL: Busca Produto.
+    // Query MS SQL
     const connection = new Connection(config);
 
     // Tentativa de conexão.
@@ -133,7 +135,7 @@ else {
         `Insert Into dbo.Conta values (\'${nomeconta}\', \'${user}\', \'${banco}\', \'${saldo}\', \'${agencia}\', \'${numero}\', \'${pix}\', \'${rendimento}\');`,
         (err, rowCount) => {
           if (err) {
-            ipc.send('erroupdate');
+            ipc.send('erroinsert');
             console.error(err.message);
           }
           else {
@@ -184,7 +186,7 @@ function listagem() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
+      window.location = "../Erros/erro-conexao.html?user="+user;
     } else {queryDatabase();}
   });
 
@@ -201,10 +203,11 @@ function listagem() {
       Where c.CodUsuario = \'${user}\' AND c.NomeConta = \'${conta}\'`, 
       (err, rowCount) => {
         if (err) {
-          console.error(err.message);
+          ipc.send('erroselect'); window.location = "../Conta/Conta.html?user="+user;
         }
         else {
           console.log(`${rowCount} linha(s) retornadas`);
+          if (rowCount != 1) {ipc.send('erroselect'); window.location = "../Conta/Conta.html?user="+user;}
         }
       }
     );
@@ -230,9 +233,9 @@ function listagem() {
   }
 }
 
-listagem();
 
-
-
-
+var btnCancelar = document.querySelector('.btn-cancelar');
+btnCancelar.addEventListener('click', ()=>{
+  window.location = "../Conta/Conta.html?user="+user;
+})
 

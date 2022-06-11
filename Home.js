@@ -1,6 +1,6 @@
 const { Connection, Request } = require("tedious");
 const Chart = require('chart.js');
-
+const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
@@ -45,7 +45,7 @@ btnDespesa.addEventListener('click', ()=>{
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
+      window.location = "../Erros/erro-conexao.html?user="+user;
     } else {queryDatabase();}
   });
 
@@ -115,7 +115,6 @@ btnDespesa.addEventListener('click', ()=>{
     // Tentativa de conexão.
     connection.on("connect", err => {
       if (err) {
-        ipc.send('erroconexao');
       } else {queryDatabase();}
     });
   
@@ -216,7 +215,6 @@ function conexao1() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -285,7 +283,6 @@ function conexao2() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -358,7 +355,6 @@ function conexao2() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -434,7 +430,6 @@ function conexao4() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 

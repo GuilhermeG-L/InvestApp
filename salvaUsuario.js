@@ -1,5 +1,5 @@
 const { Connection, Request } = require("tedious");
-
+const ipc = require('electron').ipcRenderer
 
   var btnRegistro = document.querySelector('.btnRegistro');
   btnRegistro.addEventListener('click', ()=>{
@@ -48,7 +48,7 @@ const { Connection, Request } = require("tedious");
         `Insert Into dbo.Usuario values (\'${email}\', \'${nome}\', \'${sobrenome}\', \'${senha}\');`,
         (err, rowCount) => {
           if (err) {
-            console.log(err.message);
+            ipc.send('erroinsert');
           }
           else {
             console.log(`${rowCount} linha(s) retornadas`);

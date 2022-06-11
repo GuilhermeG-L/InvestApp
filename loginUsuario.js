@@ -1,5 +1,5 @@
 const { Connection, Request } = require("tedious");
-
+const ipc = require('electron').ipcRenderer
 
 var btnLogar = document.querySelector('#btn-login');
 btnLogar.addEventListener('click', ()=>{
@@ -45,10 +45,11 @@ btnLogar.addEventListener('click', ()=>{
       Where Email = \'${email}\' AND Senha = \'${senha}\'`,
       (err, rowCount) => {
         if (err) {
-          console.error(err.message);
+          ipc.send('errologin');
         }
         else {
           console.log(`${rowCount} linha(s) retornadas`);
+          if (rowCount != 1) {ipc.send('errologin');}
         }
       }
     );

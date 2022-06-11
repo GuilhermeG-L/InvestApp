@@ -1,6 +1,6 @@
 const { Connection, Request } = require("tedious");
 const Chart = require('chart.js');
-
+const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
@@ -32,7 +32,7 @@ console.log(teste);
     // Tentativa de conexão.
     connection.on("connect", err => {
       if (err) {
-        ipc.send('erroconexao');
+        window.location = "../Erros/erro-conexao.html?user="+user;
       } else {queryDatabase();}
     });
   
@@ -134,7 +134,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -238,7 +237,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -342,7 +340,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -445,7 +442,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -548,7 +544,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 

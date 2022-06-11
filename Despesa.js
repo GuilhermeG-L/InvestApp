@@ -1,5 +1,5 @@
 const { Connection, Request } = require("tedious");
-
+const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
@@ -467,7 +467,7 @@ function delecao(codigo, c) {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
+      window.location = "../Erros/erro-conexao.html?user="+user;
     } else {queryDatabase();}
   });
 
@@ -532,7 +532,6 @@ function conexao() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -595,7 +594,6 @@ function conexao1() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      console.log(err);
     } else {queryDatabase();}
   });
 
