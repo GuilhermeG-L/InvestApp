@@ -124,6 +124,7 @@ btnSimular.addEventListener('click', ()=>{
         dado = (porcDI/100) * dado;
         while (n > 0) {
           let valMes = valPresente * (1 + dado/100) ** ((1)/12);
+          valPresente = valPresente.toFixed(2);
           chart.config.data.datasets[0].data.push(`${valPresente}`);
           chart.update();
           valPresente = valMes;
@@ -131,6 +132,7 @@ btnSimular.addEventListener('click', ()=>{
         }
 
         // Adicionando último mês Pré-IR.
+        valPresente = valPresente.toFixed(2);
         chart.config.data.datasets[0].data.push(`${valPresente}`);
         chart.update();
         // Imposto de Renda.
@@ -138,12 +140,14 @@ btnSimular.addEventListener('click', ()=>{
           if (qtdmeses < 6) {
             let IR = 0.225;
             valPresente = valPresente - ((valPresente - valInicial) * IR);
+            valPresente = valPresente.toFixed(2);
             chart.config.data.datasets[0].data.push(`${valPresente}`);
             chart.update();
           }
           else {
             let IR = 0.2;
             valPresente = valPresente - ((valPresente - valInicial) * IR);
+            valPresente = valPresente.toFixed(2);
             chart.config.data.datasets[0].data.push(`${valPresente}`);
             chart.update();
           }
