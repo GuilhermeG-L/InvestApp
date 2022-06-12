@@ -36,6 +36,10 @@ function createWindow(){
 
 app.on('ready', createWindow);
 
+ipcMain.on('erroqtdcontas', function (event) {
+    dialog.showErrorBox ('Limite de contas atingido! ','Temporariamente, o InvestApp está permitindo somente 4 contas por usuário.')
+})
+
 ipcMain.on('erroconfpw', function (event) {
     dialog.showErrorBox ('Senhas diferentes inseridas! ','Insira a mesma senha nos dois campos.')
 })

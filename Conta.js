@@ -13,10 +13,10 @@ console.log(teste);
 function btns () {
 
   // BTN Add
-  btnConta = document.querySelector('#btnConta')
+/*  btnConta = document.querySelector('#btnConta')
   btnConta.addEventListener('click', ()=>{
     window.location = '../Conta/registro-conta.html?user='+user;
-  })
+  }) */
 
   // BTNs Editar
   btnEditar1 = document.querySelector('#btnEditar1')
@@ -281,9 +281,77 @@ function conexao() {
         i++;
       });
     });
-
-    connection.execSql(request);
+    connection.execSql(request)
   }}
 
+
+
+  function verifqtd() {
+    // Configuração de conexão DB.
+    const config = {
+      authentication: {
+        options: {
+          userName: "sqlserver",
+          password: "IES301%Inve$tApp"
+        },
+        type: "default"
+      },
+      server: "35.199.92.55",
+      options: {
+        database: "InvestApp",
+        encrypt: true
+      }
+    };
+  
+    // Query MS SQL - Receita
+    const connection = new Connection(config);
+  
+    // Tentativa de conexão.
+    connection.on("connect", err => {
+      if (err) {
+      } else {queryDatabase();}
+    });
+  
+    // Conexão do DB.
+    connection.connect();
+  
+    // Função de criação de Query.
+    function queryDatabase() {
+      console.log("Lendo dados da tabela...");
+  
+      const request = new Request(
+        `SELECT count(*)
+        FROM dbo.Conta`, 
+        (err, rowCount) => {
+          if (err) {
+            console.error(err.message);
+          }
+          else {
+            console.log(`${rowCount} linha(s) retornadas`);
+          }
+        }
+      );
+      
+      var i = 1;
+  
+      // Console.log da query.
+      request.on("row", columns => {
+        columns.forEach(column => {
+          dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
+          dado = parseInt(dado);
+          if (dado > 3) {
+            btnConta = document.querySelector('#btnConta')
+            btnConta.addEventListener('click', ()=>{ipc.send('erroqtdcontas');})
+          }
+          else {
+            btnConta = document.querySelector('#btnConta')
+            btnConta.addEventListener('click', ()=>{window.location = '../Conta/registro-conta.html?user='+user;})
+          }
+        });
+      });
+      connection.execSql(request)
+    }}
+
   conexao();
+  verifqtd(); // Função para verificar qtd de Contas (Limite provisório: 4).
   btns();
