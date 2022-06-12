@@ -1,0 +1,322 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #F6F8FA;
+}
+
+.conteudo{
+    flex:1;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    padding:  3.62%;
+   
+}
+
+.conteudo-cima{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 1%;
+}
+
+.conteudo-meio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+}
+
+.conteudo-baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    height: 15%;
+    padding-top: 2%;
+}
+
+.formulario-registro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+}
+
+.formulario-descricao{
+    width: 96%;
+    height: 100%;
+
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 2%; 
+}
+
+.titulo{
+    width: 100%;
+    height: 66%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-formulario{
+    width: 100%;
+    height: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: Gray;
+    /* or 0% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.formulario-dados{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+    width: 66%;
+    height: 100%;
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px 22px 22px 23px;
+    margin: 2%;    
+}
+
+.formulario-registro-2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+    width: 33%;
+    height: 100%;
+
+    background: #FCFCFC;
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px 22px 22px 23px;
+    margin: 2%;    
+}
+
+.input-registro{
+    width: 100%;
+    height: 30px;
+    background-color: #FCFCFC;
+    border: 2px solid #D7D7D7;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.input-descricao{
+    width: 100%;
+    height: 30px;
+    background-color: #FCFCFC;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.input-registro::placeholder, .input-descricao::placeholder{
+    color: #C4C4C4;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+}
+
+.input-registro:focus, .input-descricao:focus, .tipo-conta-sai:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+
+.cima-dados, .baixo-dados, .formulario-programado{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.tipo-conta-sai{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../../midia/icons/setaPraBaixo.png) no-repeat center left #FFF;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding-right: 20px;
+    width: 100%;
+    height: 55%;
+    margin-bottom: 2%;
+
+    border: 2px solid #D7D7D7;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.tipo-conta-sai{
+    color: #C4C4C4;
+    background-color: #FCFCFC;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+    padding-left: 50px;
+}
+
+#input2, #input3{
+    margin-left:5%;
+}
+
+#input5{
+
+}
+
+.Programado{
+    margin-left:15%;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5%;
+    color: #C4C4C4;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.9%;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+}
+
+.btns-formulario{
+    width: 20%;
+    height: 100%;
+
+    background:linear-gradient(93.91deg, rgba(253, 142, 118, 0.88) 9.59%, rgba(245, 149, 140, 0.81) 89.2%);
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 22px 23px 22px 23px;
+    margin: 2%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-finalizar {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    /* or 0% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: white;
+
+}
+
+.btns-finalizar{
+    width: 200%;
+    height: 200%;
+
+    background-color: transparent;
+    border: none;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btns-formulario-2{
+    width: 20%;
+    height: 100%;
+
+    background: rgb(213, 213, 213);
+    border: 2px solid rgba(193, 193, 193, 0.42);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 22px 23px 22px 23px;
+    margin: 2%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-cancelar {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    /* or 0% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: rgb(79, 79, 79);
+
+}
+
+.btns-cancelar{
+    width: 200%;
+    height: 200%;
+
+    background-color: transparent;
+    border: none;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
