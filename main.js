@@ -64,7 +64,7 @@ const options = {
     type: 'warning',
     title: 'AVISO!',
     buttons: ['OK'],
-    message: 'As Simulações de Investimento do InvestApp, apesar de baseadas em dados reais, são totalmente ilustrativas e de cunho educativo/comparativo, podendo não representar fielmente o retorno de um investimento em determinado banco sob condições específicas.'
+    message: 'As Simulações de Investimento pós-fixadas do InvestApp, apesar de baseadas em dados reais atualizados periodicamente, são totalmente ilustrativas e de cunho comparativo, podendo não representar fielmente o retorno de um investimento em determinado banco, securitizadora, ou agência de valores sob condições específicas.'
   };
 
 ipcMain.on('msginvestimento', function (event) {
