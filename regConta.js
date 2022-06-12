@@ -8,6 +8,58 @@ const conta = urlParams.get('conta');
 
 console.log(conta);
 
+
+// -------------------------------------- VERIFICAÇÕES/RESTRIÇÕES
+
+// Declaração de Variáveis
+//var input1 = document.querySelector('#input1');
+var input2 = document.querySelector('#input2');
+var input3 = document.querySelector('#input3');
+var input4 = document.querySelector('#input4');
+//var input5 = document.querySelector('#input5');
+//var input6 = document.querySelector('#input6');
+var input7 = document.querySelector('#input7');
+
+// Eventos
+//input1.addEventListener('change', verificaNomeC);
+input2.addEventListener('change', verificaSaldo);
+input3.addEventListener('change', verificaAgencia);
+input4.addEventListener('change', verificaNumero);
+//input5.addEventListener('change', verificaBanco);
+//input6.addEventListener('change', verificaPIX);
+input7.addEventListener('change', verificaRendimento);
+
+// Funções
+function verificaSaldo () {
+  let porc = document.querySelector('#input2').value;
+  if (porc > 9999999999) {
+    document.querySelector('#input2').value = 9999999999;
+  }
+}
+
+function verificaAgencia () {
+  let val = document.querySelector('#input3').value;
+  if (val > 9999) {
+    document.querySelector('#input3').value = 9999;
+  }
+}
+
+function verificaNumero () {
+  let val = document.querySelector('#input4').value;
+  if (val > 99999) {
+    document.querySelector('#input4').value = 99999;
+  }
+}
+
+function verificaRendimento () {
+  let val = document.querySelector('#input7').value;
+  if (val > 99) {
+    document.querySelector('#input7').value = 99;
+  }
+}
+
+// -------------------------------------- FUNCIONALIDADES
+
 if (conta != null) {
 
   var btnRegistrar = document.querySelector('.btn-registrar');

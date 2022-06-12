@@ -11,6 +11,32 @@ console.log(teste);
 
 ipc.send('msginvestimento');
 
+// -------------------------------------- VERIFICAÇÕES/RESTRIÇÕES
+
+// Declaração de Variáveis
+var porcentagem = document.querySelector('#porcentagem-di');
+var valor = document.querySelector('#deposito-inicial');
+
+// Eventos
+porcentagem.addEventListener('change', verificaPorcentagem);
+valor.addEventListener('change', verificaValor);
+
+// Funções
+function verificaPorcentagem () {
+  let porc = document.querySelector('#porcentagem-di').value;
+  if (porc > 999) {
+    document.querySelector('#porcentagem-di').value = 999;
+  }
+}
+
+function verificaValor () {
+  let val = document.querySelector('#deposito-inicial').value;
+  if (val > 9999999999) {
+    document.querySelector('#deposito-inicial').value = 9999999999;
+  }
+}
+
+// -------------------------------------- FUNCIONALIDADES
 
 var btnSimular = document.querySelector('.btn-simula');
 btnSimular.addEventListener('click', ()=>{

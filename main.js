@@ -36,6 +36,10 @@ function createWindow(){
 
 app.on('ready', createWindow);
 
+ipcMain.on('erroconfpw', function (event) {
+    dialog.showErrorBox ('Senhas diferentes inseridas! ','Insira a mesma senha nos dois campos.')
+})
+
 ipcMain.on('erroconexao', function (event) {
     dialog.showErrorBox ('Não foi possível conectar ao Servidor! ','Verifique sua conexão de internet e tente novamente.')
 })
