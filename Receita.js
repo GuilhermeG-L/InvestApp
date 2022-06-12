@@ -36,7 +36,8 @@ function btns () {
   btnExclui1.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td1`).textContent); 
     const conta = document.querySelector(`#td2`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td4`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita2 = document.querySelector('#btnEdita2'); 
@@ -50,7 +51,8 @@ function btns () {
   btnExclui2.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td6`).textContent); 
     const conta = document.querySelector(`#td7`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td9`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita3 = document.querySelector('#btnEdita3'); 
@@ -64,7 +66,8 @@ function btns () {
   btnExclui3.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td11`).textContent); 
     const conta = document.querySelector(`#td12`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td14`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita4 = document.querySelector('#btnEdita4'); 
@@ -78,7 +81,8 @@ function btns () {
   btnExclui4.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td16`).textContent); 
     const conta = document.querySelector(`#td17`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td19`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita5 = document.querySelector('#btnEdita5'); 
@@ -92,7 +96,8 @@ function btns () {
   btnExclui5.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td21`).textContent); 
     const conta = document.querySelector(`#td22`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td24`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita6 = document.querySelector('#btnEdita6'); 
@@ -106,7 +111,8 @@ function btns () {
   btnExclui6.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td26`).textContent); 
     const conta = document.querySelector(`#td27`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td29`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita7 = document.querySelector('#btnEdita7'); 
@@ -120,7 +126,8 @@ function btns () {
   btnExclui7.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td31`).textContent); 
     const conta = document.querySelector(`#td32`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td34`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita8 = document.querySelector('#btnEdita8'); 
@@ -134,7 +141,8 @@ function btns () {
   btnExclui8.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td36`).textContent); 
     const conta = document.querySelector(`#td37`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td39`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita9 = document.querySelector('#btnEdita9'); 
@@ -148,7 +156,8 @@ function btns () {
   btnExclui9.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td41`).textContent); 
     const conta = document.querySelector(`#td42`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td44`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita10 = document.querySelector('#btnEdita10'); 
@@ -162,7 +171,8 @@ function btns () {
   btnExclui10.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td46`).textContent); 
     const conta = document.querySelector(`#td47`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td49`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita11 = document.querySelector('#btnEdita11'); 
@@ -176,7 +186,8 @@ function btns () {
   btnExclui11.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td51`).textContent); 
     const conta = document.querySelector(`#td52`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td54`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita12 = document.querySelector('#btnEdita12'); 
@@ -190,7 +201,8 @@ function btns () {
   btnExclui12.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td56`).textContent); 
     const conta = document.querySelector(`#td57`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td59`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita13 = document.querySelector('#btnEdita13'); 
@@ -204,7 +216,8 @@ function btns () {
   btnExclui13.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td61`).textContent); 
     const conta = document.querySelector(`#td62`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td64`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita14 = document.querySelector('#btnEdita14'); 
@@ -218,7 +231,8 @@ function btns () {
   btnExclui14.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td66`).textContent); 
     const conta = document.querySelector(`#td67`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td69`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita15 = document.querySelector('#btnEdita15'); 
@@ -232,7 +246,8 @@ function btns () {
   btnExclui15.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td71`).textContent); 
     const conta = document.querySelector(`#td72`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td74`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita16 = document.querySelector('#btnEdita16'); 
@@ -246,7 +261,8 @@ function btns () {
   btnExclui16.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td76`).textContent); 
     const conta = document.querySelector(`#td77`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td79`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita17 = document.querySelector('#btnEdita17'); 
@@ -260,7 +276,8 @@ function btns () {
   btnExclui17.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td81`).textContent); 
     const conta = document.querySelector(`#td82`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td84`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita18 = document.querySelector('#btnEdita18'); 
@@ -274,7 +291,8 @@ function btns () {
   btnExclui18.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td86`).textContent); 
     const conta = document.querySelector(`#td87`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td89`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita19 = document.querySelector('#btnEdita19'); 
@@ -288,7 +306,8 @@ function btns () {
   btnExclui19.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td91`).textContent); 
     const conta = document.querySelector(`#td92`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td94`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita20 = document.querySelector('#btnEdita20'); 
@@ -302,7 +321,8 @@ function btns () {
   btnExclui20.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td96`).textContent); 
     const conta = document.querySelector(`#td97`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td98`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita21 = document.querySelector('#btnEdita21'); 
@@ -316,7 +336,8 @@ function btns () {
   btnExclui21.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td101`).textContent); 
     const conta = document.querySelector(`#td102`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td104`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita22 = document.querySelector('#btnEdita22'); 
@@ -330,7 +351,8 @@ function btns () {
   btnExclui22.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td106`).textContent); 
     const conta = document.querySelector(`#td107`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td109`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita23 = document.querySelector('#btnEdita23'); 
@@ -344,7 +366,8 @@ function btns () {
   btnExclui23.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td111`).textContent); 
     const conta = document.querySelector(`#td112`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td114`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita24 = document.querySelector('#btnEdita24'); 
@@ -358,7 +381,8 @@ function btns () {
   btnExclui24.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td116`).textContent); 
     const conta = document.querySelector(`#td117`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td119`).textContent); 
+    delecao(cod, conta, valor);
   });
 
   var btnEdita25 = document.querySelector('#btnEdita25'); 
@@ -372,16 +396,18 @@ function btns () {
   btnExclui25.addEventListener('click', ()=>{ 
     const cod = parseInt(document.querySelector(`#td121`).textContent); 
     const conta = document.querySelector(`#td122`).textContent; 
-    delecao(cod, conta);
+    const valor = parseFloat(document.querySelector(`#td124`).textContent); 
+    delecao(cod, conta, valor);
   });
 
 }
 
 
 
-function delecao(codigo, c) {
+function delecao(codigo, c, v) {
   var cod = codigo;
   var conta = c;
+  var valor = v;
   // Configuração de conexão DB.
   const config = {
     authentication: {
@@ -424,6 +450,144 @@ function delecao(codigo, c) {
         }
         else {
           console.log(`${rowCount} linha(s) retornadas`);
+          selectsaldo(conta, valor);
+          // window.location = '../ReceitasDespesas/receitas.html?user='+user;
+        }
+      }
+    );
+    
+    var i = 1;
+
+    // Console.log da query.
+    request.on("row", columns => {
+      columns.forEach(column => {
+        dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
+      });
+    });
+
+    connection.execSql(request);
+  }
+
+}
+
+
+
+function selectsaldo(c, v) {
+  var conta = c;
+  var valor = v;
+  // Configuração de conexão DB.
+  const config = {
+    authentication: {
+      options: {
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
+      },
+      type: "default"
+    },
+    server: "35.199.92.55",
+    options: {
+      database: "InvestApp",
+      encrypt: true
+    }
+  };
+
+  // Query MS SQL - Deleção
+  const connection = new Connection(config);
+
+  // Tentativa de conexão.
+  connection.on("connect", err => {
+    if (err) {
+      ipc.send('erroconexao');
+    } else {queryDatabase();}
+  });
+
+  // Conexão do DB.
+  connection.connect();
+
+  // Função de criação de Query.
+  function queryDatabase() {
+    console.log("Lendo dados da tabela...");
+
+    const request = new Request(
+      `SELECT c.Saldo
+      FROM dbo.Conta c
+      Where c.CodUsuario = \'${user}\' AND c.NomeConta = \'${conta}\'`, 
+      (err, rowCount) => {
+        if (err) {
+          console.error(err.message);
+        }
+        else {
+          console.log(`${rowCount} linha(s) retornadas`);
+          // window.location = '../ReceitasDespesas/receitas.html?user='+user;
+        }
+      }
+    );
+    
+    var i = 1;
+
+    // Console.log da query.
+    request.on("row", columns => {
+      columns.forEach(column => {
+        dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
+        dado = parseFloat(dado);
+        let novosaldo = dado - valor;
+        updatesaldo(conta, novosaldo);
+      });
+    });
+
+    connection.execSql(request);
+  }
+
+}
+
+
+
+function updatesaldo(c, s) {
+  var conta = c;
+  var saldo = s;
+  // Configuração de conexão DB.
+  const config = {
+    authentication: {
+      options: {
+        userName: "sqlserver",
+        password: "IES301%Inve$tApp"
+      },
+      type: "default"
+    },
+    server: "35.199.92.55",
+    options: {
+      database: "InvestApp",
+      encrypt: true
+    }
+  };
+
+  // Query MS SQL - Deleção
+  const connection = new Connection(config);
+
+  // Tentativa de conexão.
+  connection.on("connect", err => {
+    if (err) {
+      ipc.send('erroconexao');
+    } else {queryDatabase();}
+  });
+
+  // Conexão do DB.
+  connection.connect();
+
+  // Função de criação de Query.
+  function queryDatabase() {
+    console.log("Lendo dados da tabela...");
+
+    const request = new Request(
+      `UPDATE dbo.Conta
+      SET Saldo = \'${saldo}\'
+      Where CodUsuario = \'${user}\' AND NomeConta = \'${conta}\'`, 
+      (err, rowCount) => {
+        if (err) {
+          console.error(err.message);
+        }
+        else {
+          console.log(`${rowCount} linha(s) retornadas`);
           window.location = '../ReceitasDespesas/receitas.html?user='+user;
         }
       }
@@ -442,6 +606,13 @@ function delecao(codigo, c) {
   }
 
 }
+
+
+
+
+
+
+
 
 // --------------------------------------------------- Listas, gráficos, etc
 
@@ -618,6 +789,7 @@ function conexao1() {
         }
         else {
           console.log(`${rowCount} linha(s) retornadas`);
+          btns();
         }
       }
     );
@@ -739,7 +911,7 @@ function conexao1() {
         if(column.metadata.colName == 'Valor') {
           dado = dado.toFixed(2);
           (linha.insertCell(-1)).id = (`td${i}`);
-          document.getElementById(`td${i}`).textContent = 'R$ ' + dado;
+          document.getElementById(`td${i}`).textContent = dado;
           i++;
         }
         else {
@@ -773,4 +945,4 @@ function conexao1() {
 
 conexao();
 conexao1();
-setInterval(btns, 500);
+//setInterval(btns, 1000);
