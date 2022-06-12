@@ -45,6 +45,7 @@ btnSimular.addEventListener('click', ()=>{
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
+      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 

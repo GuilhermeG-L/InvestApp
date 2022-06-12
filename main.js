@@ -37,7 +37,7 @@ function createWindow(){
 app.on('ready', createWindow);
 
 ipcMain.on('erroconexao', function (event) {
-    dialog.showErrorBox ('Não foi possível conectar ao Banco de Dados! ','Verifique sua conexão de internet e tente novamente.')
+    dialog.showErrorBox ('Não foi possível conectar ao Servidor! ','Verifique sua conexão de internet e tente novamente.')
 })
 
 ipcMain.on('errologin', function (event) {
