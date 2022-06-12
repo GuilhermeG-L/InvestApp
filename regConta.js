@@ -12,24 +12,32 @@ console.log(conta);
 // -------------------------------------- VERIFICAÇÕES/RESTRIÇÕES
 
 // Declaração de Variáveis
-//var input1 = document.querySelector('#input1');
+var input1 = document.querySelector('#input1');
 var input2 = document.querySelector('#input2');
 var input3 = document.querySelector('#input3');
 var input4 = document.querySelector('#input4');
-//var input5 = document.querySelector('#input5');
-//var input6 = document.querySelector('#input6');
+var input5 = document.querySelector('#input5');
+var input6 = document.querySelector('#input6');
 var input7 = document.querySelector('#input7');
 
 // Eventos
-//input1.addEventListener('change', verificaNomeC);
+input1.addEventListener('keypress', verificaNomeCKey);
 input2.addEventListener('change', verificaSaldo);
 input3.addEventListener('change', verificaAgencia);
 input4.addEventListener('change', verificaNumero);
-//input5.addEventListener('change', verificaBanco);
-//input6.addEventListener('change', verificaPIX);
+input5.addEventListener('keypress', verificaBancoKey);
+input6.addEventListener('keypress', verificaPIXKey);
 input7.addEventListener('change', verificaRendimento);
 
 // Funções
+
+function verificaNomeCKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
 function verificaSaldo () {
   let porc = document.querySelector('#input2').value;
   if (porc > 9999999999) {
@@ -50,6 +58,20 @@ function verificaNumero () {
     document.querySelector('#input4').value = 99999;
   }
 }
+
+function verificaBancoKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
+function verificaPIXKey (event) {  
+    var key = event.keyCode;
+     if (key === 32) {
+       event.preventDefault();
+     }
+ };
 
 function verificaRendimento () {
   let val = document.querySelector('#input7').value;

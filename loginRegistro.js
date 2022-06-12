@@ -5,12 +5,50 @@ const ipc = require('electron').ipcRenderer
 // -------------------------------------- VERIFICAÇÕES/RESTRIÇÕES
 
 // Declaração de Variáveis
+var inputnome = document.querySelector('#input-name');
+var inputsobrenome = document.querySelector('#input-lastname');
+var inputemail = document.querySelector('#input-emailreg');
+var inputpw = document.querySelector('#input-pwreg');
 var inputconfpw = document.querySelector('#input-confpw');
 
 // Eventos
+inputnome.addEventListener('keypress', verificaNomeKey);
+inputsobrenome.addEventListener('keypress', verificaSobrenomeKey);
+inputemail.addEventListener('keypress', verificaEmailKey);
+inputpw.addEventListener('keypress', verificaPWKey);
+inputconfpw.addEventListener('keypress', verificaPWKey);
 inputconfpw.addEventListener('change', verificaPW);
 
 // Funções
+// Impossibilita teclar espaço
+function verificaNomeKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
+function verificaSobrenomeKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
+function verificaEmailKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
+function verificaPWKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
 function verificaPW () {
   var pw1 = document.querySelector('#input-pwreg').value;
   var pw2 = document.querySelector('#input-confpw').value;
