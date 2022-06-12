@@ -92,7 +92,10 @@ if (conta != null) {
     let banco = document.querySelector('#input5').value;
     let pix = document.querySelector('#input6').value;
     let rendimento = parseFloat(document.querySelector('#input7').value);
-    
+
+    if (isNaN(rendimento)) {
+      rendimento = 0;
+    }
 
     // Configuração de conexão DB.
     const config = {
@@ -171,6 +174,9 @@ else {
     let pix = document.querySelector('#input6').value;
     let rendimento = parseFloat(document.querySelector('#input7').value);
     
+    if (isNaN(rendimento)) {
+      rendimento = 0;
+    }
 
     // Configuração de conexão DB.
     const config = {
