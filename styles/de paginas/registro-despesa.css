@@ -184,7 +184,7 @@ input[type=number]::-webkit-inner-spin-button {
     border: 1px solid gray;
     font-size: 15px;
     padding-right: 20px;
-    width: 100%;
+    width: 90%;
     height: 55%;
     margin-bottom: 2%;
 
@@ -203,12 +203,12 @@ input[type=number]::-webkit-inner-spin-button {
     padding-left: 50px;
 }
 
-#input2, #input3{
+#input2, #input4{
     margin-left:5%;
 }
 
-#input5{
-
+#input4{
+    margin-bottom: 4.5%;
 }
 
 .Programado{

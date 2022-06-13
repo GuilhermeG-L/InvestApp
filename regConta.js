@@ -39,9 +39,12 @@ function verificaNomeCKey (event) {
 };
 
 function verificaSaldo () {
-  let porc = document.querySelector('#input2').value;
-  if (porc > 9999999999) {
+  let sald = document.querySelector('#input2').value;
+  if (sald > 9999999999) {
     document.querySelector('#input2').value = 9999999999;
+  }
+  if (sald < 0) {
+    document.querySelector('#input2').value = 0;
   }
 }
 

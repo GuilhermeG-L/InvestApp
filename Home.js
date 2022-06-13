@@ -370,7 +370,8 @@ function conexao2() {
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
       Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
-      Where u.CodUsuario = \'${user}\'`, 
+      Where u.CodUsuario = \'${user}\'
+      Order By d.DataDespesa DESC`, 
       (err, rowCount) => {
         if (err) {
           console.error(err.message);
@@ -445,7 +446,8 @@ function conexao4() {
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
       Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
-      Where u.CodUsuario = \'${user}\'`, 
+      Where u.CodUsuario = \'${user}\'
+      Order By r.DataReceita DESC`, 
       (err, rowCount) => {
         if (err) {
           console.error(err.message);

@@ -11,11 +11,13 @@ const conta = urlParams.get('conta');
 // Declaração de Variáveis
 var input1 = document.querySelector('#input1');
 var input2 = document.querySelector('#input2');
+var input4 = document.querySelector('#input4');
 
 // Eventos
 input1.addEventListener('change', verificaValor);
 input1.addEventListener('keypress', verificaValorKey);
 input2.addEventListener('keypress', verificaCategoriaKey);
+input4.addEventListener('keypress', verificaDestinatarioKey);
 
 // Funções
 
@@ -43,6 +45,13 @@ function verificaCategoriaKey (event) {
    }
 };
 
+function verificaDestinatarioKey (event) {  
+  var key = event.keyCode;
+   if (key === 32) {
+     event.preventDefault();
+   }
+};
+
 // -------------------------------------- FUNCIONALIDADES
 
 if (cod != null) {
@@ -53,9 +62,10 @@ if (cod != null) {
   btnFinalizar.addEventListener('click', ()=>{
     let valor = parseFloat(document.querySelector('#input1').value);
     let categoria = document.querySelector('#input2').value;
-    let dataRec = document.querySelector('#input4').value;
-    let programacao = document.querySelector('#input5').checked;
-    let descricao = document.querySelector('#input6').value;
+    let destinatario = document.querySelector('#input4').value;
+    let dataDesp = document.querySelector('#input5').value;
+    let programacao = document.querySelector('#input6').checked;
+    let descricao = document.querySelector('#input7').value;
     
     if (programacao == true) {
       programacao = 'Programada';
@@ -101,9 +111,9 @@ if (cod != null) {
       console.log("Lendo dados da tabela...");
 
       const request = new Request(
-        `UPDATE dbo.Receita
-        SET Valor = \'${valor}\', Categoria = \'${categoria}\', Programacao = \'${programacao}\', DataReceita = \'${dataRec}\', Descricao = \'${descricao}\'
-        Where CodUsuario = \'${user}\' AND NomeConta = \'${conta}\' AND CodReceita = \'${cod}\'`,
+        `UPDATE dbo.Despesa
+        SET Valor = \'${valor}\', Categoria = \'${categoria}\', Programacao = \'${programacao}\', DataDespesa = \'${dataDesp}\', Destinatario = \'${destinatario}\', Descricao = \'${descricao}\'
+        Where CodUsuario = \'${user}\' AND NomeConta = \'${conta}\' AND CodDespesa = \'${cod}\'`,
         (err, rowCount) => {
           if (err) {
             ipc.send('erroupdate');
@@ -188,7 +198,7 @@ if (cod != null) {
         columns.forEach(column => {
           dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
           dado = parseFloat(dado);
-          let novosaldo = dado + (valor - valorAntigo);
+          let novosaldo = dado - (valor - valorAntigo);
           console.log(novosaldo, valor, valorAntigo)
           updatesaldo(conta, novosaldo);
         });
@@ -250,7 +260,7 @@ if (cod != null) {
           }
           else {
             console.log(`${rowCount} linha(s) retornadas`);
-            window.location = '../ReceitasDespesas/receitas.html?user='+user;
+            window.location = '../ReceitasDespesas/despesas.html?user='+user;
           }
         }
       );
@@ -273,16 +283,17 @@ if (cod != null) {
 
 else {
 
-  addReceita();
-  function addReceita () {
+  addDespesa();
+  function addDespesa () {
     var btnFinalizar = document.querySelector('.btn-finalizar');
     btnFinalizar.addEventListener('click', ()=>{
       let valor = parseFloat(document.querySelector('#input1').value);
       let categoria = document.querySelector('#input2').value;
       let nomeconta = document.querySelector('#input3').value;
-      let dataRec = document.querySelector('#input4').value;
-      let programacao = document.querySelector('#input5').checked;
-      let descricao = document.querySelector('#input6').value;
+      let destinatario = document.querySelector('#input4').value;
+      let dataDesp = document.querySelector('#input5').value;
+      let programacao = document.querySelector('#input6').checked;
+      let descricao = document.querySelector('#input7').value;
       
       if (programacao == true) {
         programacao = 'Programada';
@@ -328,7 +339,7 @@ else {
         console.log("Lendo dados da tabela...");
   
         const request = new Request(
-          `Insert Into dbo.Receita values (\'${nomeconta}\', \'${user}\', \'${valor}\', \'${categoria}\', \'${programacao}\', \'${dataRec}\', \'${descricao}\');`,
+          `Insert Into dbo.Despesa values (\'${nomeconta}\', \'${user}\', \'${valor}\', \'${categoria}\', \'${programacao}\', \'${dataDesp}\', \'${destinatario}\', \'${descricao}\');`,
           (err, rowCount) => {
             if (err) {
               ipc.send('erroinsert');
@@ -413,7 +424,7 @@ else {
           columns.forEach(column => {
             dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
             dado = parseFloat(dado);
-            let novosaldo = dado + valor;
+            let novosaldo = dado - valor;
             updatesaldo(nomeconta, novosaldo);
           });
         });
@@ -471,7 +482,7 @@ else {
             }
             else {
               console.log(`${rowCount} linha(s) retornadas`);
-              window.location = '../ReceitasDespesas/receitas.html?user='+user;
+              window.location = '../ReceitasDespesas/despesas.html?user='+user;
             }
           }
         );
@@ -536,9 +547,9 @@ function listagem() {
     console.log("Lendo dados da tabela...");
 
     const request = new Request(
-      `SELECT r.Valor 'Valor', r.Categoria, r.NomeConta 'NomeConta', r.DataReceita, r.Programacao 'Programacao', r.Descricao
-      FROM dbo.Receita r
-      Where r.CodUsuario = \'${user}\' AND r.CodReceita = \'${cod}\' AND r.NomeConta = \'${conta}\'`,
+      `SELECT d.Valor 'Valor', d.Categoria, d.NomeConta 'NomeConta', d.Destinatario, d.DataDespesa, d.Programacao 'Programacao', d.Descricao
+      FROM dbo.Despesa d
+      Where d.CodUsuario = \'${user}\' AND d.CodDespesa = \'${cod}\' AND d.NomeConta = \'${conta}\'`,
       (err, rowCount) => {
         if (err) {
           console.error(err.message);
@@ -761,5 +772,5 @@ listagemSelect();
 
 var btnCancelar = document.querySelector('.btn-cancelar');
 btnCancelar.addEventListener('click', ()=>{
-  window.location = "../ReceitasDespesas/receitas.html?user="+user;
+  window.location = "../ReceitasDespesas/despesas.html?user="+user;
 })
