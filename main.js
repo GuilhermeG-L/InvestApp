@@ -36,8 +36,16 @@ function createWindow(){
 
 app.on('ready', createWindow);
 
+ipcMain.on('erroqtdcontas', function (event) {
+    dialog.showErrorBox ('Limite de contas atingido! ','Temporariamente, o InvestApp está permitindo somente 4 contas por usuário.')
+})
+
+ipcMain.on('erroconfpw', function (event) {
+    dialog.showErrorBox ('Senhas diferentes inseridas! ','Insira a mesma senha nos dois campos.')
+})
+
 ipcMain.on('erroconexao', function (event) {
-    dialog.showErrorBox ('Não foi possível conectar ao Banco de Dados! ','Verifique sua conexão de internet e tente novamente.')
+    dialog.showErrorBox ('Não foi possível conectar ao Servidor! ','Verifique sua conexão de internet e tente novamente.')
 })
 
 ipcMain.on('errologin', function (event) {
@@ -60,7 +68,16 @@ ipcMain.on('errodelete', function (event) {
     dialog.showErrorBox ('Não foi possível deletar os dados! ','Verifique se os dados existem e estão corretos.')
 })
 
+const options = {
+    type: 'warning',
+    title: 'AVISO!',
+    buttons: ['OK'],
+    message: 'As Simulações de Investimento pós-fixadas do InvestApp, apesar de baseadas em dados reais atualizados periodicamente, são totalmente ilustrativas e de cunho comparativo, podendo não representar fielmente o retorno de um investimento em determinado banco, securitizadora, ou agência de valores sob condições específicas.'
+  };
 
+ipcMain.on('msginvestimento', function (event) {
+    dialog.showMessageBox (null, options)
+})
 
 
 

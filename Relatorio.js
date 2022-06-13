@@ -1,6 +1,6 @@
 const { Connection, Request } = require("tedious");
 const Chart = require('chart.js');
-
+const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
@@ -32,7 +32,7 @@ console.log(teste);
     // Tentativa de conexão.
     connection.on("connect", err => {
       if (err) {
-        ipc.send('erroconexao');
+        window.location = "../Erros/erro-conexao.html?user="+user;
       } else {queryDatabase();}
     });
   
@@ -46,7 +46,7 @@ console.log(teste);
       const request = new Request(
         `SELECT c.NomeConta, SUM(r.Valor)
         FROM dbo.Conta c
-        Inner Join dbo.Receita r ON c.CodUsuario = r.CodUsuario
+        Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
         Where c.CodUsuario = \'${user}\'
         Group By c.NomeConta`, 
         (err, rowCount) => {
@@ -134,7 +134,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -148,7 +147,7 @@ console.log(teste);
     const request = new Request(
       `SELECT c.NomeConta, SUM(d.Valor)
       FROM dbo.Conta c
-      Inner Join dbo.Despesa d ON c.CodUsuario = d.CodUsuario
+      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
       Where c.CodUsuario = \'${user}\'
       Group By c.NomeConta`, 
       (err, rowCount) => {
@@ -238,7 +237,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -342,7 +340,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -445,7 +442,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -548,7 +544,6 @@ console.log(teste);
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 

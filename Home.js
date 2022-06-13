@@ -1,6 +1,6 @@
 const { Connection, Request } = require("tedious");
 const Chart = require('chart.js');
-
+const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
 const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
@@ -45,7 +45,7 @@ btnDespesa.addEventListener('click', ()=>{
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
+      window.location = "../Erros/erro-conexao.html?user="+user;
     } else {queryDatabase();}
   });
 
@@ -115,7 +115,6 @@ btnDespesa.addEventListener('click', ()=>{
     // Tentativa de conexão.
     connection.on("connect", err => {
       if (err) {
-        ipc.send('erroconexao');
       } else {queryDatabase();}
     });
   
@@ -176,7 +175,7 @@ btnDespesa.addEventListener('click', ()=>{
           dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
           console.log(dado);
           //Adicionando os dados numéricos no Chart.
-          if (dado > -1) {
+          if (column.metadata.colName == 'Saldo') {
             chart.config.data.datasets[0].data.push(`${dado}`);
             chart.update();
           }
@@ -216,7 +215,6 @@ function conexao1() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -285,7 +283,6 @@ function conexao2() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -358,7 +355,6 @@ function conexao2() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -374,7 +370,8 @@ function conexao2() {
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
       Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
-      Where u.CodUsuario = \'${user}\'`, 
+      Where u.CodUsuario = \'${user}\'
+      Order By d.DataDespesa DESC`, 
       (err, rowCount) => {
         if (err) {
           console.error(err.message);
@@ -434,7 +431,6 @@ function conexao4() {
   // Tentativa de conexão.
   connection.on("connect", err => {
     if (err) {
-      ipc.send('erroconexao');
     } else {queryDatabase();}
   });
 
@@ -450,7 +446,8 @@ function conexao4() {
       FROM dbo.Usuario u
       Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
       Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
-      Where u.CodUsuario = \'${user}\'`, 
+      Where u.CodUsuario = \'${user}\'
+      Order By r.DataReceita DESC`, 
       (err, rowCount) => {
         if (err) {
           console.error(err.message);

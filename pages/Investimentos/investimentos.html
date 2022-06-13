@@ -18,17 +18,17 @@
 			<div class="insercao-dados">
 				<section class="coluna-esquerda">
 					<select name="tipoInvest" id = "tipoInvest">
-						<option id = "option-default" value="default">Tipo de investimento</option>
+						<option id = "option-default" value="default" style="display: none">Tipo de investimento</option>
 						<option value="cdb">CDB</option>
 						<option value="lci">LCI</option>
 						<option value="lca">LCA</option>
 						<option value="cri">CRI</option>
 						<option value="cra">CRA</option>
 					</select>
-					<input type="number" class="input-dados" id = "deposito-inicial" placeholder="Depósito inicial" />
+					<input type="number" class="input-dados" id = "deposito-inicial" placeholder="Valor investido" />
 				</section>
 				<section class="coluna-direita">
-					<input type="number" class="input-dados" id="deposito-mensal" placeholder="Depósito mensal"/>
+					<input type="number" class="input-dados" id="porcentagem-di" placeholder="Rendimento (em %)" max="999"/>
 					<!-- <input type="text" class="input-dados" id="mes-resgate" placeholder="Mês e ano de resgate"/> -->
 				</section>
 				<button class = "btn-simula">Simular</button>
@@ -42,5 +42,6 @@
 		</div>
 	</div>
 	<script>window.api.loadscript('./inatividade.js')</script>
+	<script> window.api.loadscript('./Investimento.js');</script>
 </body>
 </html>
