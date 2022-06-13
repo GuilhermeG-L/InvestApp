@@ -245,7 +245,7 @@ function conexao() {
     console.log("Lendo dados da tabela...");
 
     const request = new Request(
-      `SELECT c.NomeConta, c.Rendimento 'Rendimento', c.Saldo
+      `SELECT c.NomeConta, c.Rendimento 'Rendimento', c.Saldo 'Saldo'
       FROM dbo.Conta c
       Where c.CodUsuario = \'${user}\'`, 
       (err, rowCount) => {
@@ -265,7 +265,7 @@ function conexao() {
       columns.forEach(column => {
         dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
         console.log(dado);
-        if (dado > -1) {
+        if (column.metadata.colName == 'Rendimento' || column.metadata.colName == 'Saldo') {
           if (column.metadata.colName == 'Rendimento') {
             dado = dado.toFixed(2);
             document.getElementById(`Rtd${i}`).textContent = dado + '% a.a.';

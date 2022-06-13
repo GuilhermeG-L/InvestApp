@@ -175,7 +175,7 @@ btnDespesa.addEventListener('click', ()=>{
           dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
           console.log(dado);
           //Adicionando os dados numéricos no Chart.
-          if (dado > -1) {
+          if (column.metadata.colName == 'Saldo') {
             chart.config.data.datasets[0].data.push(`${dado}`);
             chart.update();
           }
