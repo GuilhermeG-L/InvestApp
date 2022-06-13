@@ -14,7 +14,6 @@ const user = urlParams.get('user');
 
 var menuLat = document.createElement('div')
 var btnLogo = document.createElement('img')
-var btnAdd = document.createElement('img')
 var btnTransacoes = document.createElement('img')
 var btnBancos = document.createElement('img')
 var btnRelatorios = document.createElement('img')
@@ -27,7 +26,6 @@ var btnLogOff = document.createElement('img')
 
 menuLat.classList = 'menuLateral btnMenuLateral'
 btnLogo.classList = 'btnLogo btnMenuLateral'
-btnAdd.classList = 'btnAdd btnMenuLateral'
 btnTransacoes.classList = 'btnReceitasDespesas btnMenuLateral'
 btnBancos.classList = 'btnBancos btnMenuLateral'
 btnRelatorios.classList = 'btnRelatorios btnMenuLateral'
@@ -36,7 +34,6 @@ btnLogOff.classList = 'btnLogOff'
 
 // Atribuição de titles
 
-btnAdd.title = 'Home'
 btnTransacoes.title = 'Receitas e Despesas'
 btnBancos.title = 'Contas'
 btnRelatorios.title = 'Relatórios'
@@ -45,7 +42,6 @@ btnLogOff.title = 'LogOff'
 
 // Atribuição de SRC para as imagens
 btnLogo.src = '../../midia/icons/Logo reduzido.png'
-btnAdd.src = '../../midia/icons/btn Mais.png'
 btnTransacoes.src = '../../midia/icons/btn ReceitasDespesas.png'
 btnBancos.src = '../../midia/icons/btn ContasBancarias.png'
 btnRelatorios.src = '../../midia/icons/btn Relatorios.png'
@@ -82,7 +78,6 @@ paginaAtiva()
 // Append dos elementos no Menu Lateral
 
 menuLat.append(btnLogo)
-menuLat.append(btnAdd)
 menuLat.append(btnTransacoes)
 menuLat.append(btnBancos)
 menuLat.append(btnRelatorios)
@@ -94,10 +89,6 @@ document.body.append(menuLat)
 
 // Atribuição dos redirecionamentos
 btnLogo.addEventListener('click', ()=>{
-    window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
-})
-
-btnAdd.addEventListener('click', ()=>{
     window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
 })
 

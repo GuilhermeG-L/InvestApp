@@ -16,19 +16,16 @@
 
 .btnLogo{
     width: 125%;
+    margin-bottom: 3.2em;
 }
 
-.btnAdd{
-    width: 200%;
-    margin-top: 3em;
-}
 
 .btnReceitasDespesas{
     margin-top: 2em;
 }
 
 .btnBancos, .btnRelatorios, .btnInvestimento{
-    margin-top: 1.3em;
+    margin-top: 2em;
 }
 
 .btnReceitasDespesas, .btnBancos, .btnRelatorios, .btnInvestimento{
