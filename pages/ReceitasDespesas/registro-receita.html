@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="formulario-registro-2">
-                    <input type = "date" class = "input-registro" id = "input4" placeholder="Data de saída">
+                    <input type = "date" class = "input-registro" id = "input4" placeholder="Data de saída" min="2000-01-01" max="2023-01-01">
                     <div class="formulario-programado">
                         <input type = "checkbox" class = "input-checkbox" id = "input5" name="Programado">
                         <label class="Programado">Programado</label>
@@ -45,7 +45,8 @@
                 </div>
             </div>
             <div class="formulario-descricao">
-                <input type = "text" class = "input-descricao" id = "input6" placeholder="Descrição">
+            <!--    <input type = "text" class = "input-descricao" id = "input6" placeholder="Descrição"> -->
+                <textarea class = "input-descricao" id = "input6" placeholder="Descrição" maxlength="100"></textarea>
             </div>
         </div>
         <div class="conteudo-baixo">

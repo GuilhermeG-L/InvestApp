@@ -144,13 +144,13 @@ body{
 }
 
 .input-descricao{
+    font-family: 'Inter', sans-serif;
     width: 100%;
-    height: 30px;
+    height: 100%;
     background-color: #FCFCFC;
     border: none;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
+    resize: none;
 }
 
 .input-registro::placeholder, .input-descricao::placeholder{
