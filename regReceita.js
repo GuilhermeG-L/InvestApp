@@ -737,6 +737,10 @@ function listagem() {
           }
           else {
             console.log(`${rowCount} linha(s) retornadas`);
+            for (let x = 1; x < 5; x++) {
+              c = document.getElementById(`conta-${x}`).value; // Removendo options vazias
+              if (c == '') {document.getElementById(`conta-${x}`).style.display = "none";}
+            }
           }
         }
       );

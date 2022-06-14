@@ -18,11 +18,7 @@ function btns () {
     window.location = '../ReceitasDespesas/despesas.html?user='+user;
   });
 
-  //BTN Add
-  var btnAdd = document.querySelector('#btnreceita');
-  btnAdd.addEventListener('click', ()=>{
-    window.location = '../ReceitasDespesas/registro-receita.html?user='+user;
-  });
+
 
   // BTNs Editar/Excluir - Lista
   var btnEdita1 = document.querySelector('#btnEdita1'); 
@@ -943,6 +939,78 @@ function conexao1() {
     connection.execSql(request);
   }}
 
+
+  function verifqtd() {
+    // Configuração de conexão DB.
+    const config = {
+      authentication: {
+        options: {
+          userName: "sqlserver",
+          password: "IES301%Inve$tApp"
+        },
+        type: "default"
+      },
+      server: "35.199.92.55",
+      options: {
+        database: "InvestApp",
+        encrypt: true
+      }
+    };
+  
+    // Query MS SQL - Receita
+    const connection = new Connection(config);
+  
+    // Tentativa de conexão.
+    connection.on("connect", err => {
+      if (err) {
+      } else {queryDatabase();}
+    });
+  
+    // Conexão do DB.
+    connection.connect();
+  
+    // Função de criação de Query.
+    function queryDatabase() {
+      console.log("Lendo dados da tabela...");
+  
+      const request = new Request(
+        `SELECT count(*)
+        FROM dbo.Conta
+        Where CodUsuario = \'${user}\'`, 
+        (err, rowCount) => {
+          if (err) {
+            console.error(err.message);
+          }
+          else {
+            console.log(`${rowCount} linha(s) retornadas`);
+          }
+        }
+      );
+      
+  
+      // Console.log da query.
+      request.on("row", columns => {
+        columns.forEach(column => {
+          dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
+          if (dado > 0) {
+            //BTN Add
+            var btnAdd = document.querySelector('#btnreceita');
+            btnAdd.addEventListener('click', ()=>{
+                window.location = '../ReceitasDespesas/registro-receita.html?user='+user;
+            });
+          }
+          else {
+            var btnAdd = document.querySelector('#btnreceita');
+            btnAdd.addEventListener('click', ()=>{
+                ipc.send('erromincontas');
+            });
+          }
+        });
+      });
+      connection.execSql(request)
+    }}
+
+
 conexao();
 conexao1();
-//setInterval(btns, 1000);
+verifqtd();

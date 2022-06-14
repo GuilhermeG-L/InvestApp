@@ -321,7 +321,8 @@ function conexao() {
   
       const request = new Request(
         `SELECT count(*)
-        FROM dbo.Conta`, 
+        FROM dbo.Conta
+        Where CodUsuario = \'${user}\'`, 
         (err, rowCount) => {
           if (err) {
             console.error(err.message);

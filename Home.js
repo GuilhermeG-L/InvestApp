@@ -11,7 +11,7 @@ console.log(teste);
 
 
 // BTNs Home
-btnReceita = document.querySelector('#btnReceita')
+/*btnReceita = document.querySelector('#btnReceita')
 btnReceita.addEventListener('click', ()=>{
   window.location = '../ReceitasDespesas/registro-receita.html?user='+user;
 })
@@ -19,7 +19,7 @@ btnReceita.addEventListener('click', ()=>{
 btnDespesa = document.querySelector('#btnDespesa')
 btnDespesa.addEventListener('click', ()=>{
   window.location = '../ReceitasDespesas/registro-despesa.html?user='+user;
-})
+}) */
 
 // --------------------------------------------------- Listas, gráficos, etc 
 
@@ -479,8 +479,91 @@ function conexao4() {
     connection.execSql(request);
   }}
   
+
+
+  function verifqtd() {
+    // Configuração de conexão DB.
+    const config = {
+      authentication: {
+        options: {
+          userName: "sqlserver",
+          password: "IES301%Inve$tApp"
+        },
+        type: "default"
+      },
+      server: "35.199.92.55",
+      options: {
+        database: "InvestApp",
+        encrypt: true
+      }
+    };
+  
+    // Query MS SQL - Receita
+    const connection = new Connection(config);
+  
+    // Tentativa de conexão.
+    connection.on("connect", err => {
+      if (err) {
+      } else {queryDatabase();}
+    });
+  
+    // Conexão do DB.
+    connection.connect();
+  
+    // Função de criação de Query.
+    function queryDatabase() {
+      console.log("Lendo dados da tabela...");
+  
+      const request = new Request(
+        `SELECT count(*)
+        FROM dbo.Conta
+        Where CodUsuario = \'${user}\'`, 
+        (err, rowCount) => {
+          if (err) {
+            console.error(err.message);
+          }
+          else {
+            console.log(`${rowCount} linha(s) retornadas`);
+          }
+        }
+      );
+      
+  
+      // Console.log da query.
+      request.on("row", columns => {
+        columns.forEach(column => {
+          dado = ("%s\t%s", /*column.metadata.colName,*/ column.value);
+          if (dado > 0) {
+            //BTNs Adds
+            var btnReceita = document.querySelector('#btnReceita')
+            btnReceita.addEventListener('click', ()=>{
+              window.location = '../ReceitasDespesas/registro-receita.html?user='+user;
+            })
+
+            var btnDespesa = document.querySelector('#btnDespesa')
+            btnDespesa.addEventListener('click', ()=>{
+              window.location = '../ReceitasDespesas/registro-despesa.html?user='+user;
+            }) 
+          }
+          else {
+            var btnReceita = document.querySelector('#btnReceita')
+            btnReceita.addEventListener('click', ()=>{
+              ipc.send('erromincontas');
+            })
+
+            var btnDespesa = document.querySelector('#btnDespesa')
+            btnDespesa.addEventListener('click', ()=>{
+              ipc.send('erromincontas');
+            }) 
+          }
+        });
+      });
+      connection.execSql(request)
+    }}
+
   conexao();
   conexao1();
   conexao2();
   conexao3();
   conexao4();
+  verifqtd();

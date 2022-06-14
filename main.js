@@ -36,6 +36,14 @@ function createWindow(){
 
 app.on('ready', createWindow);
 
+ipcMain.on('erroinatividade', function (event) {
+    dialog.showErrorBox ('Você foi desconectado por inatividade! ','Evite permanecer inativo por mais de 5 minutos.')
+})
+
+ipcMain.on('erromincontas', function (event) {
+    dialog.showErrorBox ('Você precisa ter ao menos uma conta para acessar essa área! ','Crie uma conta na área de Contas Bancárias e tente novamente.')
+})
+
 ipcMain.on('erroqtdcontas', function (event) {
     dialog.showErrorBox ('Limite de contas atingido! ','Temporariamente, o InvestApp está permitindo somente 4 contas por usuário.')
 })
@@ -77,6 +85,17 @@ const options = {
 
 ipcMain.on('msginvestimento', function (event) {
     dialog.showMessageBox (null, options)
+})
+
+const options2 = {
+    type: 'warning',
+    title: 'RECUPERAÇÃO DE SENHA!',
+    buttons: ['OK'],
+    message: 'Para recuperar sua senha, envie um e-mail através de seu e-mail registrado para investapprec@gmail.com com o título "Quero recuperar minha senha!"'
+  };
+
+ipcMain.on('msgrecpw', function (event) {
+    dialog.showMessageBox (null, options2)
 })
 
 

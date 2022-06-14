@@ -1,4 +1,4 @@
-
+const ipc = require('electron').ipcRenderer;
 
 // $(document).ready(function() {
 //     //Incrementa o tempo de inatividade
@@ -39,8 +39,9 @@ function timerIncrement(){
     segundos++
     console.log(`Tempo de inatividade: ${segundos}s`)
     if(segundos > 300){
-        window.location = './pages/LoginRegistro/loginMobile.html'
+        var inatividade = 'inatividade';
+        window.location = '../LoginRegistro/loginMobile.html?inatividade='+inatividade;
     }
 }
 
-var inatividade = setInterval(timerIncrement, 1000)
+setInterval(timerIncrement, 1000)

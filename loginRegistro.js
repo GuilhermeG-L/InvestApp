@@ -1,6 +1,20 @@
 const { Connection, Request } = require("tedious");
 const ipc = require('electron').ipcRenderer
 
+const urlParams = new URLSearchParams(window.location.search);
+const inatividade = urlParams.get('inatividade');
+
+if (inatividade == 'inatividade') {
+  ipc.send('erroinatividade');
+}
+
+// Recuperação senha
+var recpw = document.querySelector('#recpw');
+recpw.addEventListener('click', recuperacaoPW)
+
+function recuperacaoPW () {
+  ipc.send('msgrecpw');
+}
 
 // -------------------------------------- VERIFICAÇÕES/RESTRIÇÕES
 
