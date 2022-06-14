@@ -14,14 +14,14 @@ function createWindow(){
     win=new BrowserWindow({
         minWidth: 1280,
         minHeight: 720,
-        icon: __dirname + './imgs/icon.png',
+        icon: './midia/icons/png/Logo reduzido.png',
         webPreferences:{
             nodeIntegration: true,
             contextIsolation: true,
             preload: path.join(__dirname, "preload.js")
         }
     });
-    win.setMenuBarVisibility(true);
+    win.setMenuBarVisibility(false);
     win.maximize();
     win.loadURL(url.format({
         pathname: path.join(__dirname, './pages/LoginRegistro/loginRegistro.html'),
