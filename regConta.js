@@ -2,11 +2,8 @@ const { Connection, Request } = require("tedious");
 const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
-const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
 const user = urlParams.get('user');
 const conta = urlParams.get('conta');
-
-console.log(conta);
 
 
 // -------------------------------------- VERIFICAÇÕES/RESTRIÇÕES

@@ -3,11 +3,7 @@ const Chart = require('chart.js');
 const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
-const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
 const user = urlParams.get('user');
-
-console.log(user);
-console.log(teste);
 
 
     // Configuração de conexão DB.

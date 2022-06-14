@@ -36,6 +36,10 @@ function createWindow(){
 
 app.on('ready', createWindow);
 
+ipcMain.on('erroinvest', function (event) {
+    dialog.showErrorBox ('Erro no cálculo do investimento! ','Certifique-se de selecionar um tipo de investimento válido.')
+})
+
 ipcMain.on('erroinatividade', function (event) {
     dialog.showErrorBox ('Você foi desconectado por inatividade! ','Evite permanecer inativo por mais de 5 minutos.')
 })

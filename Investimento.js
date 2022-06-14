@@ -3,11 +3,7 @@ const Chart = require('chart.js');
 const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
-const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
 const user = urlParams.get('user');
-
-console.log(user);
-console.log(teste);
 
 ipc.send('msginvestimento');
 
@@ -27,12 +23,18 @@ function verificaPorcentagem () {
   if (porc > 999) {
     document.querySelector('#porcentagem-di').value = 999;
   }
+  if (porc <= 0) {
+    document.querySelector('#porcentagem-di').value = 1;
+  }
 }
 
 function verificaValor () {
   let val = document.querySelector('#deposito-inicial').value;
   if (val > 9999999999) {
     document.querySelector('#deposito-inicial').value = 9999999999;
+  }
+  if (val <= 0) {
+    document.querySelector('#deposito-inicial').value = 1;
   }
 }
 
@@ -162,6 +164,9 @@ btnSimular.addEventListener('click', ()=>{
         chart.config.data.datasets[0].data.push(`${valPresente}`);
         chart.update();
         // Imposto de Renda.
+        if (nomeinvest == 'default') {
+          ipc.send('erroinvest');
+        }
         if (nomeinvest == 'cdb') {
           if (qtdmeses < 6) {
             let IR = 0.225;

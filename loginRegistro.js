@@ -208,7 +208,7 @@ btnLogar.addEventListener('click', ()=>{
         user = ("%s\t%s", /*column.metadata.colName,*/ column.value);
         console.log(user);
         teste = 'ITAÚÁÉÍÓ   A'
-        window.location = "../Home/home.html?user="+user + "&teste="+teste; // TIRAR TESTE DEPOIS
+        window.location = "../Home/home.html?user="+user;
       });
     })
 

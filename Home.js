@@ -3,23 +3,8 @@ const Chart = require('chart.js');
 const ipc = require('electron').ipcRenderer
 
 const urlParams = new URLSearchParams(window.location.search);
-const teste = urlParams.get('teste'); // TIRAR TESTE DEPOIS
 const user = urlParams.get('user');
 
-console.log(user);
-console.log(teste);
-
-
-// BTNs Home
-/*btnReceita = document.querySelector('#btnReceita')
-btnReceita.addEventListener('click', ()=>{
-  window.location = '../ReceitasDespesas/registro-receita.html?user='+user;
-})
-
-btnDespesa = document.querySelector('#btnDespesa')
-btnDespesa.addEventListener('click', ()=>{
-  window.location = '../ReceitasDespesas/registro-despesa.html?user='+user;
-}) */
 
 // --------------------------------------------------- Listas, gráficos, etc 
 
