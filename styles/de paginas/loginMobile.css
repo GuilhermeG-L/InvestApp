@@ -37,9 +37,9 @@ body{
 
 @keyframes retornaContainer {
     from{
-        left: 0;
+        right: 50%;
     }to{
-        left: 50%;
+        right: 0;
     }
 }
 
