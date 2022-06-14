@@ -109,6 +109,6 @@ btnInvestimento.addEventListener('click', ()=>{
 })
 
 btnLogOff.addEventListener('click', ()=>{
-    window.location = "../LoginRegistro/loginMobile.html";
+    window.location = "../LoginRegistro/loginRegistro.html";
 })
 

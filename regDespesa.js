@@ -34,7 +34,7 @@ function verificaValor () {
     document.querySelector('#input1').value = 99999999;
   }
   if (val <= 0) {
-    document.querySelector('#input1').value = 1;
+    document.querySelector('#input1').value = 0.1;
   }
 }
 

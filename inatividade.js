@@ -14,7 +14,7 @@ function timerIncrement(){
     segundos++
     if(segundos > 300){
         var inatividade = 'inatividade';
-        window.location = '../LoginRegistro/loginMobile.html?inatividade='+inatividade;
+        window.location = '../LoginRegistro/loginRegistro.html?inatividade='+inatividade;
     }
 }
 

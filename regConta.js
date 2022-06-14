@@ -47,15 +47,21 @@ function verificaSaldo () {
 
 function verificaAgencia () {
   let val = document.querySelector('#input3').value;
-  if (val > 9999) {
-    document.querySelector('#input3').value = 9999;
+  if (val > 99999) {
+    document.querySelector('#input3').value = 99999;
+  }
+  if (val < 0) {
+    document.querySelector('#input3').value = 0;
   }
 }
 
 function verificaNumero () {
   let val = document.querySelector('#input4').value;
-  if (val > 99999) {
-    document.querySelector('#input4').value = 99999;
+  if (val > 999999999999) {
+    document.querySelector('#input4').value = 999999999999;
+  }
+  if (val < 0) {
+    document.querySelector('#input4').value = 0;
   }
 }
 
@@ -77,6 +83,9 @@ function verificaRendimento () {
   let val = document.querySelector('#input7').value;
   if (val > 99) {
     document.querySelector('#input7').value = 99;
+  }
+  if (val < 0) {
+    document.querySelector('#input7').value = 0;
   }
 }
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/fontes.css">
+    <link rel="stylesheet" href="../../styles/de paginas/loginRegistro.css">
+    <title>Login - InvestApp</title>
+</head>
+<body>
+    <div class="esquerda">
+        <img src = "../../midia/icons/Logo.png" class = "img-logo"/>
+        <section class="sec-login">
+            <p class="tit-login">Login</p>
+            <input type = "email" class = "input-login" id = "input-email" placeholder="Entre com o seu email"/>
+            <input type = "password" class = "input-login" id = "input-pw" placeholder="Entre com a sua senha"/>
+        </section>
+        <a href = "#" class="forget-pw" id = "recpw">Esqueceu sua senha?</a>
+        <button class = "btn-login" id = "btn-login">Entre</button>
+        <a href = "#" class = "link-registro">Não tem uma conta? Registre-se agora</a>
+    </div>
+
+    <div class="direita">
+        <div class="primeiroConteudo">
+            <p class = "tit-welcome">Bem vindo ao investApp</p>
+            <p class = "text-welcome">Com o InvestApp você pode controlar suas<br/>finanças pessoais de forma fácil, rápida e prática<br/>no seu dia a dia</p>
+        
+            <img src = "../../midia/photos/img Login.png" class = "img-login"/>
+        </div>
+        <div class="segundoConteudo">
+            <p class = "tit-esquerda">Mude sua<br/>vida financeira</p>
+            <p class="texto-esquerda">Com o InvestApp você pode controlar suas despesas, receitas e se estressar menos gerenciando seu dinheiro. Temos soluções que vão te oferecer uma visão geral para que você possa planejar cada passo.</p>
+            <img src="../../midia/photos/img Dinheiro.png" class="imgDinheiro"/>
+        </div>
+    </div>
+
+    <div class="areaRegistro">
+        <section class = "seclogo">
+            <img src = "../../midia/icons/Logo.png" class = "logo"/>
+        </section>
+        <section class="register">
+            <p class = "tit-form">Entre</p>
+            <section class = "sec-nameLastname">
+                <input type="text" class="input-registro" id = "input-name" placeholder="Nome">
+                <input type="text" class="input-registro" id = "input-lastname" placeholder="Último Nome">
+            </section>
+            <input type = "email" class = "input-registro" id = "input-emailreg" placeholder="E-Mail">
+            <input type = "password" class = "input-registro" id = "input-pwreg" placeholder="Senha">
+            <input type = "password" class = "input-registro" id = "input-confpw" placeholder="Confirme sua senha">
+            <button class = "btnRegistro" id = "btnRegistro">Registre-se</button>
+        </section>
+        <p class = "texto-login">Já tem uma conta? <a href = "#" class = "link-login">Entre</a></p>
+    </div>
+    <script> window.api.loadscript('./functions/de Interface/animacoesLoginRegistro.js');</script>
+    <script>window.api.loadscript('./loginRegistro.js');</script>
+</body>
+</html>

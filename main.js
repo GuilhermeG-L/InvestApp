@@ -24,7 +24,7 @@ function createWindow(){
     win.setMenuBarVisibility(true);
     win.maximize();
     win.loadURL(url.format({
-        pathname: path.join(__dirname, './pages/LoginRegistro/loginMobile.html'),
+        pathname: path.join(__dirname, './pages/LoginRegistro/loginRegistro.html'),
         protocol: 'file',
         slashes: true
     }));

@@ -130,7 +130,7 @@ function regUser () {
           else {
             console.log(`${rowCount} linha(s) retornadas`);
             if (rowCount != 1) {console.log('erroinsert');}
-            else {window.location = '../LoginRegistro/loginMobile.html'}
+            else {window.location = '../LoginRegistro/loginRegistro.html'}
           }
         }
       );
