@@ -5,7 +5,6 @@ const ipc = require('electron').ipcRenderer
 const urlParams = new URLSearchParams(window.location.search);
 const user = urlParams.get('user');
 
-
 // --------------------------------------------------- Listas, gráficos, etc 
 
   // Configuração de conexão DB.
@@ -262,7 +261,7 @@ function conexao2() {
     }
   };
 
-  // Query MS SQL - Saldo
+  // Query MS SQL - Despesa
   const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -314,9 +313,6 @@ function conexao2() {
   }}
 
 
-
-
-
   function conexao3() {
   // Configuração de conexão DB.
     const config = {
@@ -352,10 +348,9 @@ function conexao2() {
 
     const request = new Request(
       `SELECT TOP 4 c.NomeConta, d.Valor
-      FROM dbo.Usuario u
-      Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
-      Where u.CodUsuario = \'${user}\'
+      FROM dbo.Conta c
+      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta AND c.CodUsuario = d.CodUsuario
+      Where c.CodUsuario = \'${user}\'
       Order By d.DataDespesa DESC`, 
       (err, rowCount) => {
         if (err) {
@@ -387,10 +382,6 @@ function conexao2() {
 
     connection.execSql(request);
   }}
-
-
-
-
 
 
 function conexao4() {
@@ -428,10 +419,9 @@ function conexao4() {
 
     const request = new Request(
       `SELECT TOP 4 c.NomeConta, r.Valor
-      FROM dbo.Usuario u
-      Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
-      Where u.CodUsuario = \'${user}\'
+      FROM dbo.Conta c
+      Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta AND c.CodUsuario = r.CodUsuario
+      Where c.CodUsuario = \'${user}\'
       Order By r.DataReceita DESC`, 
       (err, rowCount) => {
         if (err) {
@@ -464,7 +454,6 @@ function conexao4() {
     connection.execSql(request);
   }}
   
-
 
   function verifqtd() {
     // Configuração de conexão DB.

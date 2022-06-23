@@ -14,8 +14,6 @@ function btns () {
     window.location = '../ReceitasDespesas/despesas.html?user='+user;
   });
 
-
-
   // BTNs Editar/Excluir - Lista
   var btnEdita1 = document.querySelector('#btnEdita1'); 
   btnEdita1.addEventListener('click', ()=>{ 
@@ -483,7 +481,7 @@ function selectsaldo(c, v) {
     }
   };
 
-  // Query MS SQL - Deleção
+  // Query MS SQL
   const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -553,7 +551,7 @@ function updatesaldo(c, s) {
     }
   };
 
-  // Query MS SQL - Deleção
+  // Query MS SQL
   const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -598,13 +596,6 @@ function updatesaldo(c, s) {
   }
 
 }
-
-
-
-
-
-
-
 
 // --------------------------------------------------- Listas, gráficos, etc
 
@@ -770,10 +761,9 @@ function conexao1() {
 
     const request = new Request(
       `SELECT r.CodReceita, c.NomeConta, r.Categoria, r.Valor, r.DataReceita
-      FROM dbo.Usuario u
-      Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
-      Where u.CodUsuario = \'${user}\'
+      FROM dbo.Conta c
+      Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta AND c.CodUsuario = r.CodUsuario
+      Where c.CodUsuario = \'${user}\'
       Order By r.DataReceita DESC`,
       (err, rowCount) => {
         if (err) {

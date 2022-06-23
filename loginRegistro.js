@@ -27,27 +27,57 @@ var inputconfpw = document.querySelector('#input-confpw');
 
 // Eventos
 inputnome.addEventListener('keypress', verificaNomeKey);
+inputnome.addEventListener('keypress', verificaNomeNull);
 inputsobrenome.addEventListener('keypress', verificaSobrenomeKey);
+inputsobrenome.addEventListener('keypress', verificaSobrenomeNull);
 inputemail.addEventListener('keypress', verificaEmailKey);
 inputpw.addEventListener('keypress', verificaPWKey);
 inputconfpw.addEventListener('keypress', verificaPWKey);
 inputconfpw.addEventListener('change', verificaPW);
 
 // Funções
-// Impossibilita teclar espaço
+
 function verificaNomeKey (event) {  
-  var key = event.keyCode;
-   if (key === 32) {
-     event.preventDefault();
+  var key = parseInt(event.keyCode);
+   if ((key > 64 && key < 91) || (key > 96 && key < 123) || (key > 191 && key < 247) || (key > 247 && key < 255) || key === 231 || key === 199 || key === 32) {}
+   else {
+    event.preventDefault();
    }
+   var str = document.querySelector('#input-name').value;
+   if (!str.trim().length) {
+    if (key === 32) {
+      event.preventDefault();
+    }
+  }
 };
 
+function verificaNomeNull () {
+  var str = document.querySelector('#input-name').value;
+  if (!str.trim().length) {
+    document.querySelector('#input-name').value = null;
+  }
+}
+
 function verificaSobrenomeKey (event) {  
-  var key = event.keyCode;
-   if (key === 32) {
-     event.preventDefault();
+  var key = parseInt(event.keyCode);
+   if ((key > 64 && key < 91) || (key > 96 && key < 123) || (key > 191 && key < 247) || (key > 247 && key < 255) || key === 231 || key === 199 || key === 32) {}
+   else {
+    event.preventDefault();
    }
+   var str = document.querySelector('#input-lastname').value;
+   if (!str.trim().length) {
+    if (key === 32) {
+      event.preventDefault();
+    }
+  }
 };
+
+function verificaSobrenomeNull () {
+  var str = document.querySelector('#input-lastname').value;
+  if (!str.trim().length) {
+    document.querySelector('#input-lastname').value = null;
+  }
+}
 
 function verificaEmailKey (event) {  
   var key = event.keyCode;
@@ -76,7 +106,6 @@ function verificaPW () {
 
 // -------------------------------------- FUNCIONALIDADES
 
-
 function regUser () {
   var btnRegistro = document.querySelector('.btnRegistro');
   btnRegistro.addEventListener('click', ()=>{
@@ -85,6 +114,12 @@ function regUser () {
     var email = (document.querySelector('#input-emailreg').value);
     var senha = (document.querySelector('#input-pwreg').value);
   
+    if (nome === '' || sobrenome === '' || senha === '') {
+      nome = '$';
+      sobrenome = '%';
+    }
+
+
     console.log(nome);
     console.log(email);
     console.log(senha);

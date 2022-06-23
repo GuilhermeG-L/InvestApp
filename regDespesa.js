@@ -12,15 +12,17 @@ const conta = urlParams.get('conta');
 var input1 = document.querySelector('#input1');
 var input2 = document.querySelector('#input2');
 var input4 = document.querySelector('#input4');
+var input5 = document.querySelector('#input5');
 
 // Eventos
 input1.addEventListener('change', verificaValor);
 input1.addEventListener('keypress', verificaValorKey);
 input2.addEventListener('keypress', verificaCategoriaKey);
+input2.addEventListener('change', verificaCategoriaNull);
 input4.addEventListener('keypress', verificaDestinatarioKey);
+input5.addEventListener('blur', verificaData);
 
 // Funções
-
 function verificaValorKey (event) {  
   var key = event.keyCode;
    if (key === 32) {
@@ -39,18 +41,50 @@ function verificaValor () {
 }
 
 function verificaCategoriaKey (event) {  
-  var key = event.keyCode;
-   if (key === 32) {
-     event.preventDefault();
+  var key = parseInt(event.keyCode);
+   if ((key > 64 && key < 91) || (key > 96 && key < 123) || key === 231 || key === 199 || key === 32) {}
+   else {
+    event.preventDefault();
    }
+   var str = document.querySelector('#input2').value;
+   if (!str.trim().length) {
+    if (key === 32) {
+      event.preventDefault();
+    }
+  }
 };
 
-function verificaDestinatarioKey (event) {  
+function verificaCategoriaNull () {
+  var str = document.querySelector('#input2').value;
+  if (!str.trim().length) {
+    document.querySelector('#input2').value = null;
+  }
+}
+
+function verificaDestinatarioKey (event) {
   var key = event.keyCode;
+  var str = document.querySelector('#input4').value;
+  if (!str.trim().length) {
    if (key === 32) {
      event.preventDefault();
    }
-};
+ }
+}
+
+function verificaData () {
+  let verifdata = document.querySelector('#input5').value;
+  let vd = new Date(verifdata);
+  let anovd = vd.getUTCFullYear();
+  if (isNaN(anovd)) {
+    document.querySelector('#input5').value = '';
+  }
+  if (anovd > 2022) {
+    document.querySelector('#input5').value = '2022-12-31';
+  }
+  if (anovd < 2000) {
+    document.querySelector('#input5').value = '2000-01-01';
+  }
+}
 
 // -------------------------------------- FUNCIONALIDADES
 
@@ -72,6 +106,10 @@ if (cod != null) {
     }
     else {
       programacao = 'Não Programada';
+    }
+    if (categoria === '' || destinatario === '') {
+      categoria = '$';
+      destinatario = '%';
     }
 
     categoria = categoria.toUpperCase();
@@ -159,7 +197,7 @@ if (cod != null) {
       }
     };
   
-    // Query MS SQL - Deleção
+    // Query MS SQL
     const connection = new Connection(config);
   
     // Tentativa de conexão.
@@ -231,7 +269,7 @@ if (cod != null) {
       }
     };
   
-    // Query MS SQL - Deleção
+    // Query MS SQL
     const connection = new Connection(config);
   
     // Tentativa de conexão.
@@ -301,7 +339,11 @@ else {
       else {
         programacao = 'Não Programada';
       }
-  
+      if (categoria === '' || destinatario === '') {
+        categoria = '$';
+        destinatario = '%';
+      }
+
       categoria = categoria.toUpperCase();
   
       console.log(categoria);
@@ -385,7 +427,7 @@ else {
         }
       };
     
-      // Query MS SQL - Deleção
+      // Query MS SQL
       const connection = new Connection(config);
     
       // Tentativa de conexão.
@@ -455,7 +497,7 @@ else {
         }
       };
     
-      // Query MS SQL - Deleção
+      // Query MS SQL
       const connection = new Connection(config);
     
       // Tentativa de conexão.
@@ -501,15 +543,7 @@ else {
     
     }
 
-
-
-
 }
-
-
-
-
-
 
 // --------------------------------------------------- 
 

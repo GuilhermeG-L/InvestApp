@@ -58,8 +58,8 @@ h1{
 }
 
 .card-grafico{
-    width: 475px;
-    height: 370px;
+    width: 73%; /* 475px; */
+    height: 370px; /* 370px; */
 
     background: #FCFCFC;
     border: 2px solid rgba(193, 193, 193, 0.42);
@@ -75,6 +75,6 @@ h1{
 
 .tit-grafico{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 1.3vw; /* 20px */
     font-weight: 700;
 }

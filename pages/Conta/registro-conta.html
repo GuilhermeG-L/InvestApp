@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="../../styles/fontes.css">
     <link rel="stylesheet" href="../../styles/de ElementosJS/menuLateral.css">
     <link rel="stylesheet" href="../../styles/de paginas/registro-contas.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Registro de Conta</title></head>
 <body>
-    <!-- <script> window.api.loadscript('./functions/de Interface/menuLateral.js');</script> -->
     <script src = "../../functions/de Interface/menuLateral.js"></script>
     <div class="conteudo">
         <div class="conteudo-cima">
@@ -23,8 +21,7 @@
                 <div class="direita">
                     <div class="registrar-conta">
                         <p class="titulo-registro" id="titulo-registrar-conta">Registro de Conta</p>
-                        <input type = "text" class = "input-registro" id = "input1" placeholder="Nome da Conta">
-                <!--        <input type = "text" class = "input-registro" id = "input2" placeholder="Nome do Banco"> -->
+                        <input type = "text" class = "input-registro" id = "input1" placeholder="Nome da Conta" maxlength="45">
                         <input type = "number" class = "input-registro" id = "input2" placeholder="Saldo">
                     </div>
                     <div class="dados-conta">
@@ -33,27 +30,19 @@
                             <input type = "number" class = "input-registro" id = "input3" placeholder="Agência (opcional)">
                             <input type = "number" class = "input-registro" id = "input4" placeholder="Número (opcional)">
                         </div>
-                        <input type = "text" class = "input-registro" id = "input5" placeholder="Banco">
+                        <input type = "text" class = "input-registro" id = "input5" placeholder="Banco" maxlength="45" >
                     </div>
                 </div>
                 <hr>
                 <div class="esquerda">
                     <div class="chave-pix">
                         <p class="titulo-registro" id="titulo-dados-conta">Chave PIX</p>
-<!--                        <select class="tipo-chave-pix">
-                            <option class="option-chave" id="tipo-chave" style="display:none;" selected>Tipo de chave PIX</option>
-                            <option class="option-chave" id="tipo-chave-email">Email</option>
-                            <option class="option-chave" id="tipo-chave-celuar">Celular</option>
-                            <option class="option-chave" id="tipo-chave-cpf">CPF</option>
-                            <option class="option-chave" id="tipo-chave-outros">Outros</option>
-                        </select> -->
                         <div class="chave">
-                            <input type = "text" class = "input-registro" id = "input6" placeholder="Chave (opcional)" >
+                            <input type = "text" class = "input-registro" id = "input6" placeholder="Chave (opcional)" maxlength="45">
                         </div>
                     </div>
                     <div class="complementos">
                         <p class="titulo-registro" id="titulo-complementos">Complemento</p>
-<!--                        <label class="porcentagem" unit="% a.a."> -->
                             <label class="porcentagem">
                             <input type = "number" class = "input-registro" id = "input7" placeholder="Rendimento">
                         </label>
@@ -76,7 +65,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script> window.api.loadscript('./regConta.js');</script>
     <script>window.api.loadscript('./inatividade.js')</script>
 </body>

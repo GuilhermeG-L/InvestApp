@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="../../styles/fontes.css">
     <link rel="stylesheet" href="../../styles/de ElementosJS/menuLateral.css">
     <link rel="stylesheet" href="../../styles/de paginas/registro-despesa.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Registro de Despesas</title></head>
 <body>
-    <!-- <script> window.api.loadscript('./functions/de Interface/menuLateral.js');</script> -->
     <script src = "../../functions/de Interface/menuLateral.js"></script>
     <div class="conteudo">
         <div class="conteudo-cima">
@@ -23,7 +21,7 @@
                 <div class="formulario-dados">
                     <div class="cima-dados">
                         <input type = "number" class = "input-registro" id = "input1" placeholder="Valor">
-                        <input type = "text" class = "input-registro" id = "input2" placeholder="Categoria">
+                        <input type = "text" class = "input-registro" id = "input2" placeholder="Categoria" maxlength="45">
                     </div>
                     <div class="baixo-dados">
                         <select class="tipo-conta-sai" id = "input3">
@@ -33,11 +31,11 @@
                             <option class="option-conta" id="conta-3"></option>
                             <option class="option-conta" id="conta-4"></option>
                         </select>
-                        <input type = "text" class = "input-registro" id = "input4" placeholder="Destinatario">
+                        <input type = "text" class = "input-registro" id = "input4" placeholder="Destinatario" maxlength="45">
                     </div>
                 </div>
                 <div class="formulario-registro-2">
-                    <input type = "date" class = "input-registro" id = "input5" placeholder="Data de saída"  min="2000-01-01" max="2023-01-01">
+                    <input type = "date" class = "input-registro" id = "input5" placeholder="Data de saída"  min="2000-01-01" max="2022-12-31">
                     <div class="formulario-programado">
                         <input type = "checkbox" class = "input-checkbox" id = "input6" name="Programado">
                         <label class="Programado">Programado</label>
@@ -45,7 +43,6 @@
                 </div>
             </div>
             <div class="formulario-descricao">
-             <!--   <input type = "text" class = "input-descricao" id = "input7" placeholder="Descrição"> -->
                 <textarea class = "input-descricao" id = "input7" placeholder="Descrição (opcional)" maxlength="100"></textarea>
             </div>
         </div>
@@ -64,7 +61,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script> window.api.loadscript('./regDespesa.js');</script>
     <script>window.api.loadscript('./inatividade.js')</script>
 </body>

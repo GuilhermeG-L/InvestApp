@@ -22,7 +22,7 @@ const user = urlParams.get('user');
         }
       };
     
-    // Query MS SQL - Últimas Receitas
+    // Query MS SQL
       const connection = new Connection(config);
   
     // Tentativa de conexão.
@@ -42,7 +42,7 @@ const user = urlParams.get('user');
       const request = new Request(
         `SELECT c.NomeConta, SUM(r.Valor)
         FROM dbo.Conta c
-        Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta
+        Inner Join dbo.Receita r ON c.NomeConta = r.NomeConta AND c.CodUsuario = r.CodUsuario
         Where c.CodUsuario = \'${user}\'
         Group By c.NomeConta`, 
         (err, rowCount) => {
@@ -124,7 +124,7 @@ const user = urlParams.get('user');
       }
     };
   
-  // Query MS SQL - Últimas Receitas
+  // Query MS SQL
     const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -143,7 +143,7 @@ const user = urlParams.get('user');
     const request = new Request(
       `SELECT c.NomeConta, SUM(d.Valor)
       FROM dbo.Conta c
-      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
+      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta AND c.CodUsuario = d.CodUsuario
       Where c.CodUsuario = \'${user}\'
       Group By c.NomeConta`, 
       (err, rowCount) => {
@@ -227,7 +227,7 @@ const user = urlParams.get('user');
       }
     };
   
-  // Query MS SQL - Últimas Receitas
+  // Query MS SQL
     const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -330,7 +330,7 @@ const user = urlParams.get('user');
       }
     };
   
-  // Query MS SQL - Últimas Receitas
+  // Query MS SQL
     const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -432,7 +432,7 @@ const user = urlParams.get('user');
       }
     };
   
-  // Query MS SQL - Últimas Receitas
+  // Query MS SQL
     const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -534,7 +534,7 @@ const user = urlParams.get('user');
       }
     };
   
-  // Query MS SQL - Últimas Receitas
+  // Query MS SQL
     const connection = new Connection(config);
 
   // Tentativa de conexão.

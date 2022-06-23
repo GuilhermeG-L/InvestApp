@@ -19,21 +19,37 @@ var input7 = document.querySelector('#input7');
 
 // Eventos
 input1.addEventListener('keypress', verificaNomeCKey);
+input1.addEventListener('change', verificaNomeCNull);
 input2.addEventListener('change', verificaSaldo);
 input3.addEventListener('change', verificaAgencia);
 input4.addEventListener('change', verificaNumero);
 input5.addEventListener('keypress', verificaBancoKey);
+input5.addEventListener('change', verificaBancoNull);
 input6.addEventListener('keypress', verificaPIXKey);
+input6.addEventListener('change', verificaPIXNull);
 input7.addEventListener('change', verificaRendimento);
 
 // Funções
-
 function verificaNomeCKey (event) {  
-  var key = event.keyCode;
-   if (key === 32) {
-     event.preventDefault();
+  var key = parseInt(event.keyCode);
+   if ((key > 64 && key < 91) || (key > 96 && key < 123) || (key > 191 && key < 247) || (key > 247 && key < 255) || key === 231 || key === 199 || key === 32) {}
+   else {
+    event.preventDefault();
    }
+   var str = document.querySelector('#input1').value;
+   if (!str.trim().length) {
+    if (key === 32) {
+      event.preventDefault();
+    }
+  }
 };
+
+function verificaNomeCNull () {
+  var str = document.querySelector('#input1').value;
+  if (!str.trim().length) {
+    document.querySelector('#input1').value = null;
+  }
+}
 
 function verificaSaldo () {
   let sald = document.querySelector('#input2').value;
@@ -66,11 +82,25 @@ function verificaNumero () {
 }
 
 function verificaBancoKey (event) {  
-  var key = event.keyCode;
-   if (key === 32) {
-     event.preventDefault();
+  var key = parseInt(event.keyCode);
+   if ((key > 64 && key < 91) || (key > 96 && key < 123) || (key > 191 && key < 247) || (key > 247 && key < 255) || key === 231 || key === 199 || key === 32) {}
+   else {
+    event.preventDefault();
    }
+   var str = document.querySelector('#input5').value;
+   if (!str.trim().length) {
+    if (key === 32) {
+      event.preventDefault();
+    }
+  }
 };
+
+function verificaBancoNull () {
+  var str = document.querySelector('#input5').value;
+  if (!str.trim().length) {
+    document.querySelector('#input5').value = null;
+  }
+}
 
 function verificaPIXKey (event) {  
     var key = event.keyCode;
@@ -78,6 +108,13 @@ function verificaPIXKey (event) {
        event.preventDefault();
      }
  };
+
+function verificaPIXNull () {
+  var str = document.querySelector('#input6').value;
+  if (!str.trim().length) {
+    document.querySelector('#input6').value = null;
+  }
+}
 
 function verificaRendimento () {
   let val = document.querySelector('#input7').value;
@@ -104,6 +141,10 @@ if (conta != null) {
 
     if (isNaN(rendimento)) {
       rendimento = 0;
+    }
+    if (banco === '' || nomeconta === '') {
+      nomeconta = '%';
+      banco = '$';
     }
 
     // Configuração de conexão DB.
@@ -185,6 +226,10 @@ else {
     
     if (isNaN(rendimento)) {
       rendimento = 0;
+    }
+    if (banco === '' || nomeconta === '') {
+      nomeconta = '%';
+      banco = '$';
     }
 
     // Configuração de conexão DB.

@@ -8,12 +8,6 @@ const user = urlParams.get('user');
 //BTNs Conta
 function btns () {
 
-  // BTN Add
-/*  btnConta = document.querySelector('#btnConta')
-  btnConta.addEventListener('click', ()=>{
-    window.location = '../Conta/registro-conta.html?user='+user;
-  }) */
-
   // BTNs Editar
   btnEditar1 = document.querySelector('#btnEditar1')
   btnEditar1.addEventListener('click', ()=>{
@@ -224,7 +218,7 @@ function conexao() {
     }
   };
 
-  // Query MS SQL - Receita
+  // Query MS SQL
   const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -299,7 +293,7 @@ function conexao() {
       }
     };
   
-    // Query MS SQL - Receita
+    // Query MS SQL
     const connection = new Connection(config);
   
     // Tentativa de conexão.

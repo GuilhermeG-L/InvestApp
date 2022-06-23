@@ -482,7 +482,7 @@ function selectsaldo(c, v) {
     }
   };
 
-  // Query MS SQL - Deleção
+  // Query MS SQL
   const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -551,7 +551,7 @@ function updatesaldo(c, s) {
     }
   };
 
-  // Query MS SQL - Deleção
+  // Query MS SQL
   const connection = new Connection(config);
 
   // Tentativa de conexão.
@@ -596,7 +596,6 @@ function updatesaldo(c, s) {
   }
 
 }
-
 
 // --------------------------------------------------- Listas, gráficos, etc
 
@@ -761,10 +760,9 @@ function conexao1() {
 
     const request = new Request(
       `SELECT d.CodDespesa, c.NomeConta, d.Categoria, d.Valor, d.DataDespesa
-      FROM dbo.Usuario u
-      Inner Join dbo.Conta c ON u.CodUsuario = c.CodUsuario
-      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta
-      Where u.CodUsuario = \'${user}\'
+      FROM dbo.Conta c
+      Inner Join dbo.Despesa d ON c.NomeConta = d.NomeConta AND c.CodUsuario = d.CodUsuario
+      Where c.CodUsuario = \'${user}\'
       Order By d.DataDespesa DESC`,
       (err, rowCount) => {
         if (err) {
